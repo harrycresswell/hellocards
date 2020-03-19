@@ -1,0 +1,13 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "hello.cards"
+description = "A simple hello card generator"
+theme="hello"
+
+[permalinks]
+  page = "/:title/"
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 5

@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <section class="Hero">
+    <h1 class="Hero-title">{{ .Title }}</h1>
+    <h2 class="Hero-description visually-hidden">{{ with .Params.description }}{{ . }} {{ else }}{{ .Site.Params.Description }}{{ end }}</h2>
+  </section>
+ 
+{{ end }}

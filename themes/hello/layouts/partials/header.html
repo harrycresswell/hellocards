@@ -1,0 +1,13 @@
+<header role="banner" class="Header">
+  <a class="site-title" href="/">{{ .Site.Title }}</a>
+  <nav class="Nav">
+    <ul class="Nav-list flex">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <li class="Nav-listItem">
+        <a class="Nav-listItemLink{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} font-mono" href="{{.URL}}">{{ .Name }}</a>
+      </li>
+    {{ end }}
+    </ul>
+  </nav>
+</header>

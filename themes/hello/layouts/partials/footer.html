@@ -1,0 +1,13 @@
+  <footer role="contentinfo" class="Footer">
+    <p><a href="https://harrycresswell.com/">HC</a>.</p>
+    <nav class="Nav Nav--footer">
+      <ul class="Nav-list">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.footer }}
+        <li class="Nav-listItem">
+          <a class="Nav-listItemLink{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} font-mono" href="{{.URL}}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+      </ul>
+    </nav>
+  </footer>

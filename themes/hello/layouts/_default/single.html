@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <article id="content" class="Post">
+        <header class="Hero">
+            <h1 class="Hero-title">{{ .Title }}</h1>
+            <h2 class="Hero-description visually-hidden">{{ with .Params.description }}{{ . }} {{ else }}{{ .Description }}{{ end }}</h2>
+        </header>
+        <section class="Post-body">
+            {{ .Content }}
+        </section>
+    </article><!--/.Content -->
+{{ end }}

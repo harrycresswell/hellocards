@@ -1,0 +1,18 @@
+{
+  "name": "hellocards",
+  "version": "1.0.0",
+  "description": "A simple hello card generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "hugo server --watch --disableFastRender",
+    "clean": "rm -rf public",
+    "build": "hugo --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss-cli": "^7.1.0"
+  }
+}
