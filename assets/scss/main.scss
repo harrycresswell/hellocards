@@ -1,4 +1,3 @@
-
 // Abstracts
 @import 'abstracts/breakpoints';
 @import 'abstracts/theme';
@@ -11,7 +10,8 @@
 @import 'base/form';
 
 // Globals
-@import 'globals/options';
+@import 'globals/wrapper';
+@import 'globals/header';
 
 // Components
 @import 'components/hero';
