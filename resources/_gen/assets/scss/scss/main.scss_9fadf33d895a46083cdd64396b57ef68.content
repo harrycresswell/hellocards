@@ -179,7 +179,10 @@ form {
 .Header {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: top; }
+  @media (min-width: 75em) {
+    .Header {
+      align-items: center; } }
   .Header .site-title {
     color: var(--color-brand);
     font-family: var(--font-mono); }
@@ -193,6 +196,13 @@ form {
     bottom: calc(var(--space) * 2);
     right: calc(var(--space) * 2);
     text-align: right; } }
+
+.Nav-list {
+  text-align: right; }
+  @media (min-width: 75em) {
+    .Nav-list {
+      display: flex;
+      text-align: left; } }
 
 .Nav-list > * + * {
   margin: 0 0 0 calc(var(--space) * 2); }
@@ -222,10 +232,7 @@ form {
   margin-left: 0; }
 
 .Hero {
-  display: flex;
-  flex-direction: column;
-  height: 30vh;
-  justify-content: center; }
+  margin: calc(var(--space)*14) 0; }
   .Hero h1 {
     font-size: var(--font-size-xl);
     line-height: var(--line-height-tight);

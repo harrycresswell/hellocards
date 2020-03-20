@@ -1,7 +1,11 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
+
+  @include breakpoint(lg) {
+    align-items: center;
+  }
 
   .site-title {
     color: var(--color-brand);
