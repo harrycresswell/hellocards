@@ -1,0 +1,7 @@
+.Wrapper {
+  display: grid;
+
+  @include breakpoint(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

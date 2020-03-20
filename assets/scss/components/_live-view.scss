@@ -4,4 +4,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  @include breakpoint(md) {
+    min-height: 100vh;
+  }
 }

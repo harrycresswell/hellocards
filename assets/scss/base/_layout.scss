@@ -10,9 +10,11 @@ body {
 }
 
 main {
-  display: grid;
+  padding: calc(var(--space)*3);
 
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+  @include breakpoint(md) {
+    padding: calc(var(--space)*6);
+    height: 100vh;
+    overflow-y: scroll;
   }
 }

@@ -1,7 +1,7 @@
-<header role="banner" class="Header">
-  <a class="site-title" href="/">{{ .Site.Title }}</a>
+<header class="Header" role="banner">
+  <a class="site-title font-mono" href="/">{{ .Site.Title }}</a>
   <nav class="Nav">
-    <ul class="Nav-list flex">
+    <ul class="Nav-list">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
       <li class="Nav-listItem">
