@@ -1,0 +1,12 @@
+.Footer {
+  padding: calc(var(--space) * 4);
+}
+
+@include breakpoint(md) {
+  .Footer {
+    position: absolute;
+    bottom: calc(var(--space) * 4);
+    right: calc(var(--space) * 4);
+    text-align: right;
+  }
+}

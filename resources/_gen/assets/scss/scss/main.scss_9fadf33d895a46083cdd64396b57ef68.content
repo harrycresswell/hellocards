@@ -157,6 +157,16 @@ form {
   color: var(--color-brand);
   font-family: var(--font--mono); }
 
+.Footer {
+  padding: calc(var(--space) * 4); }
+
+@media (min-width: 48em) {
+  .Footer {
+    position: absolute;
+    bottom: calc(var(--space) * 4);
+    right: calc(var(--space) * 4);
+    text-align: right; } }
+
 .Hero {
   display: flex;
   flex-direction: column;
@@ -231,9 +241,7 @@ form {
 
 .font-mono {
   font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  font-size: var(--font-size-xs); }
 
 .text-center {
   text-align: center; }
