@@ -1,0 +1,14 @@
+:root {
+  --color-brand: #EF3D33;
+  --color-brand-rev: #fff;
+  --color-dark: #222;
+  --color-body: #444;
+  --color-lighter: rgb(229, 229, 229);
+  --color-lightest: rgba(0, 0, 0, 0.03);
+  --color-selection: #EEEAFF;
+}
+
+::selection {
+  color: var(--color-brand);
+  background-color: var(--color-selection);
+}

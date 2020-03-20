@@ -1,0 +1,12 @@
+.Hero {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: center;
+
+  h1 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-tight);
+    margin-bottom: calc(var(--space)*3);
+  }
+}
