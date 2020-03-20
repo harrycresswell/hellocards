@@ -1,6 +1,5 @@
   <footer role="contentinfo" class="Footer">
-    <p class="font-mono"><a href="https://harrycresswell.com/" target="_blank">hc</a> &amp; <a href="https://benmclaren.xyz/" target="_blank">bm</a>.</p>
-    <nav class="Nav Nav--footer">
+    <nav class="Nav">
       <ul class="Nav-list">
         {{ $currentPage := . }}
         {{ range .Site.Menus.footer }}
@@ -10,4 +9,5 @@
       {{ end }}
       </ul>
     </nav>
+    <p class="font-mono"><a href="https://harrycresswell.com/" target="_blank">hc</a> &amp; <a href="https://benmclaren.xyz/" target="_blank">bm</a>.</p>
   </footer>
