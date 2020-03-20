@@ -225,6 +225,17 @@ form {
   .Sticker-footer span {
     font-family: var(--font--mono); }
 
+textarea {
+  overflow: hidden;
+  resize: none;
+  outline: 0;
+  border: 0;
+  font-size: var(--font-size-xs);
+  height: 24px;
+  line-height: var(--line-height-tight);
+  text-align: center;
+  padding-top: var(--space);
+  background-color: transparent; }
 
 .font-weight-400 {
   font-weight: var(--font-medium); }
