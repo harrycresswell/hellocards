@@ -1,4 +1,25 @@
+/*------------------------------------*\
+    #ABSTRACTS: BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints
+ *
+ *
+$base-font-size = 100%/16px
+  *
+*/
+/**
+* Mobile-first styles FTW
+*
+Example:
+*/
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Rock+Salt&display=swap");
+aside.primary {
+  /* Regular content */ }
+  @media (min-width: 37.5em) {
+    aside.primary {
+      /* responsive content */ } }
+
 :root {
   --color-brand: #EF3D33;
   --color-brand-rev: #fff;
@@ -6,6 +27,13 @@
   --color-body: #444;
   --color-lighter: rgb(229, 229, 229);
   --color-lightest: rgba(0, 0, 0, 0.03);
+  --color-selection: #EEEAFF; }
+
+::selection {
+  color: var(--color-brand);
+  background-color: var(--color-selection); }
+
+:root {
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-hand: 'Rock Salt', cursive;
   --font--mono: 'Fira Code', monospace;
@@ -18,19 +46,57 @@
   --font-medium: 400;
   --font-regular: 300;
   --line-height-tight: 1;
-  --line-height--loose: 1.6;
+  --line-height--loose: 1.6; }
+
+:root {
   --space: calc(1rem/2); }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
 
-main {
-  display: grid; }
-  @media (min-width: 768px) {
-    main {
-      grid-template-columns: 1fr 1fr; } }
+html {
+  height: 100%; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* Remove default padding and list style */
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+input,
+button,
+textarea,
+select {
+  font: inherit; }
 
 body {
   color: var(--color-body);
@@ -40,27 +106,12 @@ body {
   body h2 {
     color: var(--color-dark); }
 
-.Options {
-  padding: calc(var(--space)*6); }
+main {
+  display: grid; }
   @media (min-width: 768px) {
-    .Options {
-      height: 100vh;
-      overflow-y: scroll; } }
-  .Options .site-title {
-    color: var(--color-brand);
-    font-family: var(--font--mono); }
+    main {
+      grid-template-columns: 1fr 1fr; } }
 
-.Hero {
-  display: flex;
-  flex-direction: column;
-  height: 30vh;
-  justify-content: center; }
-  .Hero h1 {
-    font-size: var(--font-size-xl);
-    line-height: var(--line-height-tight);
-    margin-bottom: calc(var(--space)*3); }
-
-/* form stuff */
 form {
   font-size: var(--font-size-s);
   padding: calc(var(--space)*2) 0;
@@ -94,6 +145,26 @@ form {
   form select {
     font-size: var(--font-size-s);
     margin: var(--space); }
+
+.Options {
+  padding: calc(var(--space)*6); }
+  @media (min-width: 768px) {
+    .Options {
+      height: 100vh;
+      overflow-y: scroll; } }
+  .Options .site-title {
+    color: var(--color-brand);
+    font-family: var(--font--mono); }
+
+.Hero {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: center; }
+  .Hero h1 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-tight);
+    margin-bottom: calc(var(--space)*3); }
 
 .live-view {
   background: var(--color-lightest);
@@ -154,22 +225,21 @@ form {
   .Sticker-footer span {
     font-family: var(--font--mono); }
 
-textarea {
-  overflow: hidden;
-  resize: none; }
 
-textarea.contact {
-  border: 0;
-  height: 24px;
-  line-height: var(--line-height-tight);
-  text-align: left;
-  padding-top: var(--space);
-  outline: 0;
-  background-color: transparent; }
-
-/* utils */
 .font-weight-400 {
   font-weight: var(--font-medium); }
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
 
 .visually-hidden {
   position: absolute !important;

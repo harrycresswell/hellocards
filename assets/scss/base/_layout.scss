@@ -1,0 +1,18 @@
+body {
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+
+  h1,
+  h2 {
+    color: var(--color-dark);
+  }
+}
+
+main {
+  display: grid;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

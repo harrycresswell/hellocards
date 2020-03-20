@@ -1,0 +1,68 @@
+.Sticker {
+  background: var(--color-brand);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: calc(var(--space)*4);
+  color: var(--color-brand-rev);
+  display: flex;
+  font-family: var(--font-sans);
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: calc(var(--space)*4);
+  max-width: calc(var(--space)*60);
+}
+
+.Sticker-header {
+  padding: calc(var(--space)*2);
+
+  h1,
+  h2 {
+    color: var(--color-white);
+  }
+
+  h1 {
+    font-size: var(--font-size-l);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-weight: var(--font-regular);
+  }
+}
+
+.Sticker-body {
+  color: var(--color-dark);
+  flex: flex-grow;
+  background-color: var(--color-brand-rev);
+  padding: calc(var(--space)*2);
+
+  textarea {
+    border: 0;
+    font-family: var(--font-hand);
+    font-size: var(--font-size-m);
+    height: 48px;
+    line-height: var(--line-height-tight);
+    text-align: center;
+    padding-top: var(--space);
+    outline: 0;
+  }
+
+  div:not(:first-of-type) {
+    margin-top: calc(var(--space)*2);
+
+    & span {
+      font-family: var(--font--mono);
+    }
+  }
+}
+
+.Sticker-footer {
+  font-family: var(--font-mono);
+  padding: calc(var(--space)*2);
+  -webkit-font-smoothing: antialiased;
+
+  & span {
+    font-family: var(--font--mono);
+  }
+}
