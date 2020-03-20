@@ -1,4 +1,3 @@
-
 // Abstracts
 @import 'abstracts/breakpoints';
 @import 'abstracts/theme';
@@ -8,16 +7,21 @@
 // Base
 @import 'base/reset';
 @import 'base/layout';
+@import 'base/links';
 @import 'base/form';
 
 // Globals
-@import 'globals/options';
+@import 'globals/wrapper';
+@import 'globals/header';
+@import 'globals/footer';
 
 // Components
+@import 'components/nav';
 @import 'components/hero';
 @import 'components/live-view';
 @import 'components/sticker';
 
 // Utilities
+@import 'utilities/flex';
 @import 'utilities/typography';
 @import 'utilities/visually-hidden';

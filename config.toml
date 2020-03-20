@@ -11,3 +11,18 @@ theme="hello"
   name = "About"
   url = "/about/"
   weight = 5
+
+[[menu.main]]
+  name = "Suggestions"
+  url = "/suggestions/"
+  weight = 5
+
+[[menu.footer]]
+  name = "About"
+  url = "/about/"
+  weight = 5
+
+[[menu.footer]]
+  name = "Suggestions"
+  url = "/suggestions/"
+  weight = 5

@@ -1,3 +1,9 @@
 :root {
-  --space: calc(1rem/2); // 1rem = 16px, 16px ÷ 2 = 8px (8pt grid)
+  --space: calc(1rem/3); // 1rem = 16px, 16px ÷ 2 = 8px (8pt grid)
+}
+
+@include breakpoint(md) {
+  :root {
+    --space: calc(1rem/2); // 1rem = 16px, 16px ÷ 2 = 8px (8pt grid)
+  }
 }
