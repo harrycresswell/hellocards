@@ -10,9 +10,10 @@ body {
 }
 
 main {
-  padding: calc(var(--space)*6);
+  padding: calc(var(--space)*3);
 
   @media (min-width: 768px) {
+    padding: calc(var(--space)*6);
     height: 100vh;
     overflow-y: scroll;
   }

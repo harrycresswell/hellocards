@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin: calc(var(--space)*4);
+  margin: calc(var(--space)*6);
   max-width: calc(var(--space)*60);
 }
 
@@ -52,7 +52,7 @@
     margin-top: calc(var(--space)*2);
 
     & span {
-      font-family: var(--font--mono);
+      font-family: var(--font-mono);
     }
   }
 }
@@ -63,6 +63,6 @@
   -webkit-font-smoothing: antialiased;
 
   & span {
-    font-family: var(--font--mono);
+    font-family: var(--font-mono);
   }
 }

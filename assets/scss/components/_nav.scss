@@ -1,0 +1,37 @@
+//.Nav {}
+
+.Nav-list>*+* {
+  margin: 0 0 0 calc(var(--space) * 2);
+}
+
+.Nav-listItem {
+  padding: calc(var(--space) / 2) 0;
+}
+
+.Nav-listItemLink {
+  font-family: var(--font-mono);
+  padding: calc(var(--space) / 2);
+
+  @include breakpoint(sm) {
+    padding: calc(var(--space) / 2) var(--space);
+  }
+}
+
+.Nav-listItemLink:hover,
+.Nav-listItemLink:focus {
+  background-color: var(--color-lightest);
+}
+
+.Nav-listItemLink--pill {
+  background-color: var(--color-lightest);
+
+}
+
+.Nav--footer {
+  column-count: 2;
+  column-gap: calc(var(--space) * 6);
+}
+
+.Nav--footer>.Nav-list>*+* {
+  margin-left: 0;
+}

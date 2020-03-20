@@ -36,7 +36,7 @@ aside.primary {
 :root {
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-hand: 'Rock Salt', cursive;
-  --font--mono: 'Fira Code', monospace;
+  --font-mono: 'Fira Code', monospace;
   --font-size-xl: 60px;
   --font-size-l: 48px;
   --font-size-m: 32px;
@@ -107,11 +107,34 @@ body {
     color: var(--color-dark); }
 
 main {
-  padding: calc(var(--space)*6); }
+  padding: calc(var(--space)*3); }
   @media (min-width: 768px) {
     main {
+      padding: calc(var(--space)*6);
       height: 100vh;
       overflow-y: scroll; } }
+
+a[class] {
+  color: var(--color-dark);
+  text-decoration: none;
+  display: inline-block; }
+  a[class]:hover {
+    text-decoration: underline; }
+  a[class]:active, a[class]:focus {
+    outline: dotted 1px var(--color-dark);
+    outline-offset: 2px; }
+
+a:not([class]) {
+  color: var(--color-link);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto; }
+  a:not([class]):hover {
+    background: var(--color-link);
+    color: var(--color-white);
+    text-decoration: none; }
+  a:not([class]):active, a:not([class]):focus {
+    outline: dotted 1px var(--color-link); }
 
 form {
   font-size: var(--font-size-s);
@@ -153,19 +176,50 @@ form {
     .Wrapper {
       grid-template-columns: 1fr 1fr; } }
 
-.Header .site-title {
-  color: var(--color-brand);
-  font-family: var(--font--mono); }
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .Header .site-title {
+    color: var(--color-brand);
+    font-family: var(--font-mono); }
 
 .Footer {
-  padding: calc(var(--space) * 4); }
+  padding: calc(var(--space) * 3); }
 
 @media (min-width: 48em) {
   .Footer {
     position: absolute;
-    bottom: calc(var(--space) * 4);
-    right: calc(var(--space) * 4);
+    bottom: calc(var(--space) * 2);
+    right: calc(var(--space) * 2);
     text-align: right; } }
+
+.Nav-list > * + * {
+  margin: 0 0 0 calc(var(--space) * 2); }
+
+.Nav-listItem {
+  padding: calc(var(--space) / 2) 0; }
+
+.Nav-listItemLink {
+  font-family: var(--font-mono);
+  padding: calc(var(--space) / 2); }
+  @media (min-width: 37.5em) {
+    .Nav-listItemLink {
+      padding: calc(var(--space) / 2) var(--space); } }
+
+.Nav-listItemLink:hover,
+.Nav-listItemLink:focus {
+  background-color: var(--color-lightest); }
+
+.Nav-listItemLink--pill {
+  background-color: var(--color-lightest); }
+
+.Nav--footer {
+  column-count: 2;
+  column-gap: calc(var(--space) * 6); }
+
+.Nav--footer > .Nav-list > * + * {
+  margin-left: 0; }
 
 .Hero {
   display: flex;
@@ -182,8 +236,10 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  min-height: 100vh; }
+  text-align: center; }
+  @media (min-width: 48em) {
+    .live-view {
+      min-height: 100vh; } }
 
 .Sticker {
   background: var(--color-brand);
@@ -195,7 +251,7 @@ form {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin: calc(var(--space)*4);
+  margin: calc(var(--space)*6);
   max-width: calc(var(--space)*60); }
 
 .Sticker-header {
@@ -227,21 +283,28 @@ form {
   .Sticker-body div:not(:first-of-type) {
     margin-top: calc(var(--space)*2); }
     .Sticker-body div:not(:first-of-type) span {
-      font-family: var(--font--mono); }
+      font-family: var(--font-mono); }
 
 .Sticker-footer {
   font-family: var(--font-mono);
   padding: calc(var(--space)*2);
   -webkit-font-smoothing: antialiased; }
   .Sticker-footer span {
-    font-family: var(--font--mono); }
+    font-family: var(--font-mono); }
+
+.flex {
+  display: flex; }
+
+.flex--sb {
+  justify-content: space-between; }
 
 .font-weight-400 {
   font-weight: var(--font-medium); }
 
 .font-mono {
   font-family: var(--font-mono);
-  font-size: var(--font-size-xs); }
+  font-size: var(--font-size-xs);
+  padding: calc(var(--space) / 2) var(--space); }
 
 .text-center {
   text-align: center; }

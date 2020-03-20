@@ -1,0 +1,34 @@
+a[class] {
+  color: var(--color-dark);
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus {
+    outline: dotted 1px var(--color-dark);
+    outline-offset: 2px;
+  }
+
+}
+
+a:not([class]) {
+  color: var(--color-link);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+
+  &:hover {
+    background: var(--color-link);
+    color: var(--color-white);
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    outline: dotted 1px var(--color-link);
+  }
+}
