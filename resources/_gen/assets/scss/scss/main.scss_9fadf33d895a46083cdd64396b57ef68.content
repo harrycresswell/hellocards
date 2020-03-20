@@ -154,6 +154,19 @@ form {
   .Sticker-footer span {
     font-family: var(--font--mono); }
 
+textarea {
+  overflow: hidden;
+  resize: none; }
+
+textarea.contact {
+  border: 0;
+  height: 24px;
+  line-height: var(--line-height-tight);
+  text-align: left;
+  padding-top: var(--space);
+  outline: 0;
+  background-color: transparent; }
+
 /* utils */
 .font-weight-400 {
   font-weight: var(--font-medium); }
