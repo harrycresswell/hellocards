@@ -13,7 +13,7 @@ $base-font-size = 100%/16px
 *
 Example:
 */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Permanent+Marker&display=swap");
 aside.primary {
   /* Regular content */ }
   @media (min-width: 37.5em) {
@@ -21,13 +21,13 @@ aside.primary {
       /* responsive content */ } }
 
 :root {
-  --color-brand: #EF3D33;
+  --color-brand: hsla(3.2, 85.5%, 56.9%, 100%);
   --color-brand-rev: #fff;
   --color-dark: #222;
   --color-body: #444;
   --color-lighter: rgb(229, 229, 229);
   --color-lightest: rgba(0, 0, 0, 0.03);
-  --color-selection: #EEEAFF; }
+  --color-selection: var(--color-lightest); }
 
 ::selection {
   color: var(--color-brand);
@@ -35,23 +35,23 @@ aside.primary {
 
 :root {
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-hand: 'Rock Salt', cursive;
-  --font-mono: 'Fira Code', monospace;
-  --font-size-xl: 56px;
-  --font-size-l: 40px;
-  --font-size-m: 24px;
-  --font-size-s: 16px;
-  --font-size-xs: 14px;
+  --font-hand: 'Permanent Marker', cursive;
+  --font--mono: 'Fira Code', monospace;
+  --font-size-xl: 60px;
+  --font-size-l: 48px;
+  --font-size-m: 32px;
+  --font-size-s: 20px;
+  --font-size-xs: 16px;
   --font-bold: 600;
   --font-medium: 400;
   --font-regular: 300;
   --line-height-tight: 1;
-  --line-height--loose: 1.6; }
+  --line-height-loose: 1.6; }
 
 @media (min-width: 48em) {
   :root {
     --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-hand: 'Rock Salt', cursive;
+    --font-hand: 'Permanent Marker', cursive;
     --font-mono: 'Fira Code', monospace;
     --font-size-xl: 60px;
     --font-size-l: 48px;
@@ -62,7 +62,7 @@ aside.primary {
     --font-medium: 400;
     --font-regular: 300;
     --line-height-tight: 1;
-    --line-height--loose: 1.6; } }
+    --line-height-loose: 1.6; } }
 
 :root {
   --space: calc(1rem/3); }
@@ -192,7 +192,7 @@ form {
 
 .Wrapper {
   display: grid; }
-  @media (min-width: 37.5em) {
+  @media (min-width: 75em) {
     .Wrapper {
       grid-template-columns: 1fr 1fr; } }
 
@@ -209,7 +209,7 @@ form {
 
 .Footer {
   padding: calc(var(--space) * 3); }
-  @media (min-width: 48em) {
+  @media (min-width: 75em) {
     .Footer {
       display: flex;
       align-items: center;
@@ -272,15 +272,18 @@ form {
 .Sticker {
   background: var(--color-brand);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-  border-radius: calc(var(--space)*4);
+  border-radius: calc(var(--space) * 4);
   color: var(--color-brand-rev);
   display: flex;
   font-family: var(--font-sans);
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin: calc(var(--space)*6);
-  max-width: calc(var(--space)*60); }
+  margin: calc(var(--space) * 8);
+  max-width: 75vw; }
+  @media (min-width: 48em) {
+    .Sticker {
+      max-width: calc(var(--space) * 64); } }
 
 .Sticker-header {
   padding: calc(var(--space)*2); }
@@ -290,42 +293,37 @@ form {
   .Sticker-header h1 {
     font-size: var(--font-size-l);
     text-transform: uppercase;
-    letter-spacing: 2px; }
+    letter-spacing: var(--space);
+    line-height: var(--line-height-tight); }
   .Sticker-header h2 {
     font-weight: var(--font-regular); }
 
 .Sticker-body {
   color: var(--color-dark);
-  flex: flex-grow;
   background-color: var(--color-brand-rev);
   padding: calc(var(--space)*2); }
-  .Sticker-body textarea {
+  .Sticker-body .your-name {
     border: 0;
     font-family: var(--font-hand);
-    font-size: var(--font-size-m);
-    height: 48px;
+    font-size: var(--font-size-l);
+    height: 60px;
     line-height: var(--line-height-tight);
-    text-align: center;
-    padding-top: var(--space);
-    outline: 0; }
+    max-width: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-align: center; }
   .Sticker-body div:not(:first-of-type) {
-    margin-top: calc(var(--space)*2); }
+    margin-top: calc(var(--space) * 2); }
     .Sticker-body div:not(:first-of-type) span {
       font-family: var(--font-mono); }
 
 .Sticker-footer {
   font-family: var(--font-mono);
-  padding: calc(var(--space)*2);
+  padding: calc(var(--space) * 2);
   -webkit-font-smoothing: antialiased; }
   .Sticker-footer span {
     font-family: var(--font-mono); }
-
-.flex {
-  display: flex; }
-
-
-.flex--sb {
-  justify-content: space-between; }
 
 textarea {
   overflow: hidden;
@@ -339,6 +337,11 @@ textarea {
   padding-top: var(--space);
   background-color: transparent; }
 
+.flex {
+  display: flex; }
+
+.flex--sb {
+  justify-content: space-between; }
 
 .font-weight-400 {
   font-weight: var(--font-medium); }

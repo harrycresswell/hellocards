@@ -1,15 +1,19 @@
 .Sticker {
   background: var(--color-brand);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-  border-radius: calc(var(--space)*4);
+  border-radius: calc(var(--space) * 4);
   color: var(--color-brand-rev);
   display: flex;
   font-family: var(--font-sans);
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin: calc(var(--space)*6);
-  max-width: calc(var(--space)*60);
+  margin: calc(var(--space) * 8);
+  max-width: 75vw;
+
+  @include breakpoint(md) {
+    max-width: calc(var(--space) * 64);
+  }
 }
 
 .Sticker-header {
@@ -23,7 +27,8 @@
   h1 {
     font-size: var(--font-size-l);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: var(--space);
+    line-height: var(--line-height-tight);
   }
 
   h2 {
@@ -33,23 +38,24 @@
 
 .Sticker-body {
   color: var(--color-dark);
-  flex: flex-grow;
   background-color: var(--color-brand-rev);
   padding: calc(var(--space)*2);
 
-  textarea {
+  .your-name {
     border: 0;
     font-family: var(--font-hand);
-    font-size: var(--font-size-m);
-    height: 48px;
+    font-size: var(--font-size-l);
+    height: 60px;
     line-height: var(--line-height-tight);
-    text-align: center;
-    padding-top: var(--space);
+    max-width: 100%;
+    margin: 0;
     outline: 0;
+    padding: 0;
+    text-align: center;
   }
 
   div:not(:first-of-type) {
-    margin-top: calc(var(--space)*2);
+    margin-top: calc(var(--space) * 2);
 
     & span {
       font-family: var(--font-mono);
@@ -59,7 +65,7 @@
 
 .Sticker-footer {
   font-family: var(--font-mono);
-  padding: calc(var(--space)*2);
+  padding: calc(var(--space) * 2);
   -webkit-font-smoothing: antialiased;
 
   & span {
