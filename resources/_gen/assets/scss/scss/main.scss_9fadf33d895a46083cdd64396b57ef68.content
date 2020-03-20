@@ -13,7 +13,7 @@ $base-font-size = 100%/16px
 *
 Example:
 */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Permanent+Marker&display=swap");
 aside.primary {
   /* Regular content */ }
   @media (min-width: 37.5em) {
@@ -35,7 +35,7 @@ aside.primary {
 
 :root {
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-hand: 'Rock Salt', cursive;
+  --font-hand: 'Permanent Marker', cursive;
   --font--mono: 'Fira Code', monospace;
   --font-size-xl: 60px;
   --font-size-l: 48px;
@@ -46,7 +46,7 @@ aside.primary {
   --font-medium: 400;
   --font-regular: 300;
   --line-height-tight: 1;
-  --line-height--loose: 1.6; }
+  --line-height-loose: 1.6; }
 
 :root {
   --space: calc(1rem/2); }
@@ -171,8 +171,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  min-height: 100vh; }
+  text-align: center; }
 
 .Sticker {
   background: var(--color-brand);
@@ -204,15 +203,17 @@ form {
   flex: flex-grow;
   background-color: var(--color-brand-rev);
   padding: calc(var(--space)*2); }
-  .Sticker-body textarea {
+  .Sticker-body .your-name {
     border: 0;
     font-family: var(--font-hand);
-    font-size: var(--font-size-m);
-    height: 48px;
+    font-size: var(--font-size-l);
+    height: 60px;
     line-height: var(--line-height-tight);
-    text-align: center;
-    padding-top: var(--space);
-    outline: 0; }
+    max-width: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-align: center; }
   .Sticker-body div:not(:first-of-type) {
     margin-top: calc(var(--space)*2); }
     .Sticker-body div:not(:first-of-type) span {
