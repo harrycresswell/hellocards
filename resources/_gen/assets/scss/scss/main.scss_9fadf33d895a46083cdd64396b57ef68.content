@@ -225,6 +225,7 @@ form {
   .Sticker-footer span {
     font-family: var(--font--mono); }
 
+
 .font-weight-400 {
   font-weight: var(--font-medium); }
 
