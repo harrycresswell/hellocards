@@ -86,3 +86,29 @@ contactMethodTag.addEventListener("change", function() {
   // update the dang HTML
    document.getElementById("contact-method").innerHTML = this.value;
 });
+
+// auto expand text areas as people type 
+// ...thanks for the code Chris Ferdinandi! (https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/)
+var autoExpand = function (field) {
+
+	// Reset field height
+	field.style.height = '64px';
+
+	// Get the computed styles for the element
+	var computed = window.getComputedStyle(field);
+
+	// Calculate the height
+	var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+	             + parseInt(computed.getPropertyValue('padding-top'), 10)
+	             + field.scrollHeight
+	             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+	             + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+	field.style.height = height + 'px';
+
+};
+
+document.addEventListener('input', function (event) {
+	if (event.target.id.toLowerCase() !== 'your-name') return;
+	autoExpand(event.target);
+}, false);

@@ -1,7 +1,7 @@
 .Footer {
   padding: calc(var(--space) * 3);
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     display: flex;
     align-items: center;
     position: absolute;
