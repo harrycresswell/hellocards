@@ -7,11 +7,13 @@ colorInput.addEventListener("change", function() {
   // Theme the site!
   document.documentElement.style.setProperty("--color-brand", this.value);
   // Save the value for next time page is visited.
-  localStorage.setItem("userThemeColor", this.value); 
+  localStorage.setItem("userThemeColor", this.value);
 });
 
 const yourNameOutputTag = document.querySelector("textarea.your-name")
+const locationTag = document.querySelector("textarea.location")
 const originalText = yourNameOutputTag.value
+
 
 document.querySelector("[name=your-name]").addEventListener("keyup", function (event) {
   if (this.value) {
@@ -25,8 +27,22 @@ yourNameOutputTag.addEventListener("keyup", function () {
   document.querySelector("[name=your-name]").value = this.value
 })
 
+document.querySelector("[name=name]").addEventListener("keyup", function (event) {
+  if (this.value) {
+    locationTag.value = this.value
+  } else {
+    locationTag.value = originalText
+  }
+})
+
+locationTag.addEventListener("keyup", function () {
+  document.querySelector("[name=name]").value = this.value
+})
+
+
 // Grab selects
 const helpTypeTag = document.querySelector(`select[name="help-type"]`);
+
 const serviceTag = document.querySelector(`select[name="service"]`);
 const timeTag = document.querySelector(`select[name="time"]`);
 const contactMethodTag = document.querySelector(`select[name="contact-method"]`);
