@@ -14,7 +14,10 @@ const yourNameOutputTag = document.querySelector("textarea.your-name")
 const locationTag = document.querySelector("textarea.location")
 const originalText = yourNameOutputTag.value
 
+//contact
+const contactTag = document.querySelector("textarea.contact")
 
+// changing the name
 document.querySelector("[name=your-name]").addEventListener("keyup", function (event) {
   if (this.value) {
     yourNameOutputTag.value = this.value
@@ -27,6 +30,7 @@ yourNameOutputTag.addEventListener("keyup", function () {
   document.querySelector("[name=your-name]").value = this.value
 })
 
+// changing the location
 document.querySelector("[name=name]").addEventListener("keyup", function (event) {
   if (this.value) {
     locationTag.value = this.value
@@ -39,6 +43,18 @@ locationTag.addEventListener("keyup", function () {
   document.querySelector("[name=name]").value = this.value
 })
 
+// changing the contact address
+document.querySelector("[name=contact]").addEventListener("keyup", function (event) {
+  if (this.value) {
+    contactTag.value = this.value
+  } else {
+    contactTag.value = originalText
+  }
+})
+
+contactTag.addEventListener("keyup", function () {
+  document.querySelector("[name=contact]").value = this.value
+})
 
 // Grab selects
 const helpTypeTag = document.querySelector(`select[name="help-type"]`);
