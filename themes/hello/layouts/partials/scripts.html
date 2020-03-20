@@ -1,4 +1,4 @@
 <!-- Concat JS and generate app.js, force cache refresh -->
 {{ $script := resources.Get "js/app.js" | minify | fingerprint }}
 <!-- Load app.js and authenticate of hashed file -->
-<script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" media="screen"></script>
+<script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" media="screen"></script>

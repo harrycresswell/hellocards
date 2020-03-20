@@ -87,7 +87,7 @@ contactMethodTag.addEventListener("change", function() {
    document.getElementById("contact-method").innerHTML = this.value;
 });
 
-// auto expand text areas as people type 
+// auto expand text areas as people type
 // ...thanks for the code Chris Ferdinandi! (https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/)
 var autoExpand = function (field) {
 
@@ -112,3 +112,26 @@ document.addEventListener('input', function (event) {
 	if (event.target.id.toLowerCase() !== 'your-name') return;
 	autoExpand(event.target);
 }, false);
+
+
+
+
+// downloading the CardBuilder
+// import domtoimage from './dom-to-image';
+// // var domtoimage = require('dom-to-image');
+//
+// domtoimage.toJpeg(document.getElementById('download'), { quality: 0.95 })
+//     .then(function (dataUrl) {
+//         var link = document.createElement('a');
+//         link.download = 'my-image-name.jpeg';
+//         link.href = dataUrl;
+//         link.click();
+//     });
+
+
+
+//
+// domtoimage.toBlob(document.getElementById('download'))
+//     .then(function (blob) {
+//         window.saveAs(blob, 'my-node.png');
+//     });
