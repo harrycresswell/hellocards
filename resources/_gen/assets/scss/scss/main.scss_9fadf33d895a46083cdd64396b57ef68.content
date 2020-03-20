@@ -284,6 +284,21 @@ form {
   @media (min-width: 48em) {
     .Sticker {
       max-width: calc(var(--space) * 64); } }
+  .Sticker textarea {
+    background-color: transparent;
+    border: 0;
+    color: var(--color-white);
+    display: inline-block;
+    font-size: inherit;
+    overflow: hidden;
+    outline: 0;
+    resize: none;
+    text-align: left;
+    vertical-align: middle; }
+  .Sticker .location {
+    height: 38px; }
+  .Sticker .contact {
+    height: 26px; }
 
 .Sticker-header {
   padding: calc(var(--space)*2); }
@@ -313,29 +328,18 @@ form {
     outline: 0;
     padding: 0;
     text-align: center; }
-  .Sticker-body div:not(:first-of-type) {
-    margin-top: calc(var(--space) * 2); }
-    .Sticker-body div:not(:first-of-type) span {
-      font-family: var(--font-mono); }
+
+.Sticky-bodyDetails {
+  font-size: var(--font-size-s); }
 
 .Sticker-footer {
-  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: calc(var(--space) * 2);
   -webkit-font-smoothing: antialiased; }
-  .Sticker-footer span {
-    font-family: var(--font-mono); }
-
-textarea {
-  overflow: hidden;
-  resize: none;
-  outline: 0;
-  border: 0;
-  font-size: var(--font-size-xs);
-  height: 24px;
-  line-height: var(--line-height-tight);
-  text-align: center;
-  padding-top: var(--space);
-  background-color: transparent; }
+  .Sticker-footer span:not(:first-of-type) {
+    margin-left: var(--space); }
 
 .flex {
   display: flex; }
