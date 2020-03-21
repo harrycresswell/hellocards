@@ -116,22 +116,25 @@ document.addEventListener('input', function (event) {
 
 
 
-// downloading the CardBuilder
-// import domtoimage from './dom-to-image';
-// // var domtoimage = require('dom-to-image');
+// // downloading the CardBuilder
+// const nodetoimage = require("dom-to-image")
+// // import domtoimage from './node_modules/dom-to-image';
 //
-// domtoimage.toJpeg(document.getElementById('download'), { quality: 0.95 })
-//     .then(function (dataUrl) {
-//         var link = document.createElement('a');
-//         link.download = 'my-image-name.jpeg';
-//         link.href = dataUrl;
-//         link.click();
-//     });
-
-
-
 //
-// domtoimage.toBlob(document.getElementById('download'))
-//     .then(function (blob) {
-//         window.saveAs(blob, 'my-node.png');
+// document.getElementById('btn').addEventListener('click', function() {
+//
+//   var node = document.getElementById('Sticker');
+//
+//   domtoimage.toPng(node)
+//     .then(function(dataUrl) {
+//     console.log(dataUrl);
+//       //window.open(dataUrl);
+//       var img = new Image();
+//       img.src = dataUrl;
+//       document.getElementById("here-appear-theimages").appendChild(img);
+//     })
+//     .catch(function(error) {
+//       console.error('oops, something went wrong!', error);
 //     });
+// 
+// });
