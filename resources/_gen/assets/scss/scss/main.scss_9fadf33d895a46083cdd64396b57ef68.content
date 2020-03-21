@@ -274,7 +274,6 @@ form {
       min-height: 100vh; } }
 
 .StickerBg {
-  background-color: var(--color-lightest);
   padding: calc(var(--space) * 8); }
 
 .Sticker {
