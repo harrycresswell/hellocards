@@ -341,23 +341,6 @@ form {
   .Sticker-footer span:not(:first-of-type) {
     margin-left: var(--space); }
 
-/* base styles */
-* {
-  margin: 0;
-  padding: 0; }
-
-body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  box-sizing: border-box; }
-
-h1 {
-  text-align: center;
-  margin: 16px 0; }
-
-h2 {
-  margin-bottom: 16px; }
-
 .wrapper {
   margin: 0 auto;
   max-width: 600px;

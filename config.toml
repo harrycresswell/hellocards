@@ -9,12 +9,12 @@ theme="hello"
 
 [[menu.main]]
   name = "about"
-  url = "/#modal"
+  url = "/#modal-about"
   weight = 5
 
 [[menu.main]]
   name = "Suggestions"
-  url = "/#modal"
+  url = "/#modal-suggestions"
   weight = 5
 
 [[menu.footer]]

@@ -2,7 +2,6 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
   {{- partial "head.html" . -}}
 	<body>
-    {{- partial "modal" . -}}
     <div class="Wrapper">
       <main id="main">
         {{- partial "header.html" . -}}
@@ -11,6 +10,8 @@
       {{- partial "live-view" . -}}
     </div>
     {{- partial "footer.html" . -}}
+    {{- partial "modal-about" . -}}
+    {{- partial "modal-suggestions" . -}}
     {{- partial "scripts.html" . -}}
 	</body>
 </html>
