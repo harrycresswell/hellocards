@@ -5,7 +5,7 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
       <li class="Nav-listItem">
-        <a class="Nav-listItemLink{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} font-mono" href="{{.URL}}">{{ .Name }}</a>
+        <a class="button Nav-listItemLink{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} font-mono" href="{{.URL}}">{{ .Name }}</a>
       </li>
     {{ end }}
     </ul>
