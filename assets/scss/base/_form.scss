@@ -35,7 +35,7 @@ form {
   textarea:focus,
   textarea:active {
     border: solid 2px var(--color-brand);
-    outline: solid 3px rgb(217, 221, 255);
+    outline: solid 3px var(--color-brand-opacity);
     outline-offset: 0;
     transition: all .2s;
   }
