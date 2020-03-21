@@ -1,4 +1,10 @@
+<!-- Store JS files independently -->
+{{ $domtoimage := resources.Get "js/dom-to-image.js" }}
+{{ $app := resources.Get "js/app.js" }}
 <!-- Concat JS and generate app.js, force cache refresh -->
-{{ $script := resources.Get "js/app.js" | minify | fingerprint }}
+{{ $scripts := slice $domtoimage $app | resources.Concat "app.js" }}
+<!-- Assign scripts to global, minify and fingerprint -->
+{{ $globalJS := $scripts | resources.Minify | resources.Fingerprint }}
 <!-- Load app.js and authenticate of hashed file -->
-<script type="module" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" media="screen"></script>
+<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}" media="screen">
+</script>

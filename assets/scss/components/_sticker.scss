@@ -1,3 +1,8 @@
+.StickerBg {
+  background-color: var(--color-lightest);
+  padding: calc(var(--space) * 8);
+}
+
 .Sticker {
   background: var(--color-brand);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -61,6 +66,7 @@
   color: var(--color-dark);
   background-color: var(--color-brand-rev);
   padding: calc(var(--space)*2);
+  flex: 1;
 
   .your-name {
     border: 0;

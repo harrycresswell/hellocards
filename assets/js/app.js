@@ -113,28 +113,17 @@ document.addEventListener('input', function (event) {
 	autoExpand(event.target);
 }, false);
 
+// grab generate button and add click event
+document.getElementById('generate-sticker').addEventListener('click', function() {
 
+  var node = document.getElementById('sticker-node');
 
-
-// // downloading the CardBuilder
-// const nodetoimage = require("dom-to-image")
-// // import domtoimage from './node_modules/dom-to-image';
-//
-//
-// document.getElementById('btn').addEventListener('click', function() {
-//
-//   var node = document.getElementById('Sticker');
-//
-//   domtoimage.toPng(node)
-//     .then(function(dataUrl) {
-//     console.log(dataUrl);
-//       //window.open(dataUrl);
-//       var img = new Image();
-//       img.src = dataUrl;
-//       document.getElementById("here-appear-theimages").appendChild(img);
-//     })
-//     .catch(function(error) {
-//       console.error('oops, something went wrong!', error);
-//     });
-// 
-// });
+  var scale = 3; 
+  domtoimage.toPng((node), { bgcolor: '#f7f7f7', quality: 1, width: node.clientWidth * scale,  height: node.clientHeight * scale,  style: {   transform: 'scale('+scale+')',   transformOrigin: 'top left' } })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-sticker.png';
+        link.href = dataUrl;
+        link.click();
+    });
+});
