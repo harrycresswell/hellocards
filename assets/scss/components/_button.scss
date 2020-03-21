@@ -46,11 +46,9 @@
 .Button--primary:active,
 .Button--primary.is-pressed {
     // background-color: var(--color-body);
-    box-shadow: 0 10px 28px rgba(47,47,47,.3);
+    // box-shadow: 0 10px 28px rgba(47,47,47,.3);
     transform: translateY(-2px);
     transition: 0.2s;
-}
-
-.Button--primary:focus {
-    outline: 4px solid #e4deff;
+    border-radius: calc(var(--space) * 4);
+    box-shadow: 0 0 0 4px rgba(234,76,137,0.1);
 }
