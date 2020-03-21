@@ -167,7 +167,8 @@ form {
     margin: calc(var(--space)*3) 0; }
   form label {
     font-weight: var(--font-medium); }
-  form input[type="text"] {
+  form input[type="text"],
+  form textarea {
     background: var(--color-white);
     border: solid 2px var(--color-lighter);
     border-radius: 0;
@@ -181,7 +182,9 @@ form {
     width: 100%;
     -webkit-appearance: none; }
   form input:focus[type="text"],
-  form input:active[type="text"] {
+  form input:active[type="text"],
+  form textarea:focus,
+  form textarea:active {
     border: solid 2px var(--color-brand);
     outline: solid 3px #d9ddff;
     outline-offset: 0;
@@ -367,10 +370,13 @@ form {
 .Modal-inner {
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 4px;
-  margin: 48px auto;
+  margin: calc(var(--space) * 6) auto;
   max-width: 600px;
-  padding: 24px;
+  padding: calc(var(--space) * 3);
   position: relative; }
+  .Modal-inner h4 {
+    color: var(--color-dark);
+    font-size: var(--font-size-m); }
 
 .Modal-cancel {
   position: absolute;
@@ -380,15 +386,25 @@ form {
 
 .Modal-close {
   position: absolute;
-  width: 32px;
-  height: 32px;
-  top: 20px;
-  right: 20px;
+  width: calc(var(--space) * 4);
+  height: calc(var(--space) * 4);
+  top: calc(var(--space) * 3);
+  right: calc(var(--space) * 3);
   opacity: 0.8;
   transition: all 200ms;
   font-size: 32px;
-  text-decoration: none;
-  color: #222; }
+  line-height: calc(var(--space) * 3);
+  padding: 0 calc(var(--space) / 2); }
+
+a.Modal-close:hover {
+  text-decoration: none; }
+
+.Modal-content {
+  font-size: var(--font-size-s);
+  margin-top: calc(var(--space) * 3); }
+  .Modal-content form fieldset {
+    display: flex;
+    flex-directon: column; }
 
 .flex {
   display: flex; }

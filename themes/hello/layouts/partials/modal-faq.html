@@ -1,0 +1,12 @@
+<section id="modal-faq" class="Modal-overlay Modal-overlay--light">
+    <a class="Modal-cancel" href="#"></a>
+    <aside class="Modal-inner">
+      <a class="Modal-close" href="#">&times;</a>
+      {{ with .Site.GetPage "/page/faq.md" }}
+        <h4>{{ .Title }}</h4>
+        <div class="Modal-content">
+          {{ .Content }}
+        </div>
+      {{ end }}
+    </aside>
+</section>
