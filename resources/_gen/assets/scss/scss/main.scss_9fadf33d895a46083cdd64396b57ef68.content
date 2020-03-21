@@ -21,7 +21,8 @@ aside.primary {
       /* responsive content */ } }
 
 :root {
-  --color-brand: hsla(3.2, 85.5%, 56.9%, 100%);
+  --color-brand: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, 1));
+  --color-brand-opacity: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, .6));
   --color-brand-rev: #fff;
   --color-dark: #222;
   --color-body: #444;
@@ -404,7 +405,7 @@ a.Modal-close:hover {
   margin-top: calc(var(--space) * 3); }
   .Modal-content form fieldset {
     display: flex;
-    flex-directon: column; }
+    flex-direction: column; }
 
 .Button {
   border-width: 0;
@@ -418,13 +419,8 @@ a.Modal-close:hover {
   border-radius: calc(var(--space) * 4);
   vertical-align: middle;
   white-space: nowrap;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none; }
-  @media (min-width: 48em) {
-    .Button {
-      font-size: 0.9rem; } }
 
 /**
  * Component Modifier
@@ -448,7 +444,7 @@ a.Modal-close:hover {
   transform: translateY(-2px);
   transition: 0.2s;
   border-radius: calc(var(--space) * 4);
-  box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
+  box-shadow: 0 0 0 4px var(--color-brand-opacity); }
 
 .flex {
   display: flex; }

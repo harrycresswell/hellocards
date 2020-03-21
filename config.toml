@@ -16,13 +16,3 @@ theme="hello"
   name = "Suggestions"
   url = "/#modal-suggestions"
   weight = 10
-
-[[menu.footer]]
-  name = "FAQs"
-  url = "/#modal-faq"
-  weight = 5
-
-[[menu.footer]]
-  name = "Suggestions"
-  url = "/#modal-suggestions"
-  weight = 10

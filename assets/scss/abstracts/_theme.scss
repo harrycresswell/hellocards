@@ -1,5 +1,6 @@
 :root {
-  --color-brand: hsla(3.2, 85.5%, 56.9%, 100%); // ;
+  --color-brand: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, 1));
+  --color-brand-opacity: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, .6));
   --color-brand-rev: #fff;
   --color-dark: #222;
   --color-body: #444;
