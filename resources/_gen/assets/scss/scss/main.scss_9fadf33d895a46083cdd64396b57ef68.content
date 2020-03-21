@@ -401,6 +401,50 @@ form {
   text-decoration: none;
   color: #222; }
 
+.Button {
+  border-width: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  outline-style: none;
+  text-align: left;
+  text-decoration: none;
+  border-radius: calc(var(--space) * 4);
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none; }
+  @media (min-width: 48em) {
+    .Button {
+      font-size: 0.9rem; } }
+
+/**
+ * Component Modifier
+ */
+.Button--primary {
+  background: var(--color-brand);
+  border: solid 2px transparent;
+  color: var(--color-brand-rev);
+  height: 48px;
+  margin: 0 auto;
+  outline-offset: 0;
+  padding: 0 24px; }
+
+/**
+ * Component Modifier State
+ */
+.Button--primary:hover,
+.Button--primary:focus,
+.Button--primary:active,
+.Button--primary.is-pressed {
+  transform: translateY(-2px);
+  transition: 0.2s;
+  border-radius: calc(var(--space) * 4);
+  box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
+
 .flex {
   display: flex; }
 
@@ -425,5 +469,8 @@ form {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important; }
+
+.Button-margin-top {
+  margin-top: calc(var(--space)*3); }
 
 /*# sourceMappingURL=main.css.map */
