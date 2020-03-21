@@ -127,4 +127,3 @@ document.getElementById('generate-sticker').addEventListener('click', function()
         link.click();
     });
 });
-

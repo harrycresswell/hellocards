@@ -8,13 +8,13 @@ theme="hello"
   page = "/:title/"
 
 [[menu.main]]
-  name = "About"
-  url = "/about/"
+  name = "about"
+  url = "/#modal-about"
   weight = 5
 
 [[menu.main]]
   name = "Suggestions"
-  url = "/suggestions/"
+  url = "/#modal-suggestions"
   weight = 5
 
 [[menu.footer]]
