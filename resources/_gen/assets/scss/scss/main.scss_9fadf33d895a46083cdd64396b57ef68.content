@@ -269,6 +269,10 @@ form {
     .live-view {
       min-height: 100vh; } }
 
+.StickerBg {
+  background-color: var(--color-lightest);
+  padding: calc(var(--space) * 8); }
+
 .Sticker {
   background: var(--color-brand);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -316,7 +320,8 @@ form {
 .Sticker-body {
   color: var(--color-dark);
   background-color: var(--color-brand-rev);
-  padding: calc(var(--space)*2); }
+  padding: calc(var(--space)*2);
+  flex: 1; }
   .Sticker-body .your-name {
     border: 0;
     font-family: var(--font-hand);
