@@ -470,7 +470,7 @@ form {
   top: -9999px !important;
   left: -9999px !important; }
 
-.Button-margin-top {
+.mt-3 {
   margin-top: calc(var(--space)*3); }
 
 /*# sourceMappingURL=main.css.map */
