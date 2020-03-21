@@ -22,7 +22,7 @@ aside.primary {
 
 :root {
   --color-brand: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, 1));
-  --color-brand-opacity: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, .6));
+  --color-brand-opacity: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, 0.3));
   --color-brand-rev: #fff;
   --color-dark: #222;
   --color-body: #444;
@@ -187,7 +187,7 @@ form {
   form textarea:focus,
   form textarea:active {
     border: solid 2px var(--color-brand);
-    outline: solid 3px #d9ddff;
+    outline: solid 3px var(--color-brand-opacity);
     outline-offset: 0;
     transition: all .2s; }
   form select {
