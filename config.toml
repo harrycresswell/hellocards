@@ -8,21 +8,21 @@ theme="hello"
   page = "/:title/"
 
 [[menu.main]]
-  name = "about"
-  url = "/#modal-about"
+  name = "FAQs"
+  url = "/#modal-faq"
   weight = 5
 
 [[menu.main]]
   name = "Suggestions"
   url = "/#modal-suggestions"
-  weight = 5
+  weight = 10
 
 [[menu.footer]]
-  name = "About"
-  url = "/about/"
+  name = "FAQs"
+  url = "/#modal-faq"
   weight = 5
 
 [[menu.footer]]
   name = "Suggestions"
-  url = "/suggestions/"
-  weight = 5
+  url = "/#modal-suggestions"
+  weight = 10

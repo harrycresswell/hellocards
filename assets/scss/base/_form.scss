@@ -14,7 +14,8 @@ form {
     font-weight: var(--font-medium);
   }
 
-  input[type="text"] {
+  input[type="text"],
+  textarea {
     background: var(--color-white);
     border: solid 2px var(--color-lighter);
     border-radius: 0;
@@ -30,7 +31,9 @@ form {
   }
 
   input:focus[type="text"],
-  input:active[type="text"] {
+  input:active[type="text"],
+  textarea:focus,
+  textarea:active {
     border: solid 2px var(--color-brand);
     outline: solid 3px rgb(217, 221, 255);
     outline-offset: 0;
@@ -41,4 +44,5 @@ form {
     font-size: var(--font-size-s);
     margin: var(--space);
   }
+
 }

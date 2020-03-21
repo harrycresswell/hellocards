@@ -1,10 +1,21 @@
-<section id="modal-suggestions" class="overlay light">
-    <a class="cancel" href="#"></a>
-    <aside class="modal">
-      <a class="close" href="#">&times;</a>
-      <h2>Suggestions</h2>
-      <div class="content">
-        <p>Click &times; or anywhere outside the modal to close.</p>
-      </div>
+<section id="modal-suggestions" class="Modal-overlay Modal-overlay--light">
+    <a class="Modal-cancel" href="#"></a>
+    <aside class="Modal-inner">
+      <a class="Modal-close" href="#">&times;</a>
+       {{ with .Site.GetPage "/page/suggestions.md" }}
+        <h4>{{ .Title }}</h4>
+        <div class="Modal-content">
+          {{ .Content }}
+
+          <form class="Form" name="suggestions" id="form-suggestions" method="POST" action="/success">
+            <fieldset>
+              <legend>What are we missing?</legend>
+              <label class="visually-hidden" for="suggestion">What are we missing?</label>
+              <textarea name="suggestion" rows="4"></textarea>
+            </fieldset>
+            <button class="Button Button--primary" type="submit" value="Submit" id="Form-submit">Submit</button>
+          </form>
+        </div>
+      {{ end }}
     </aside>
 </section>
