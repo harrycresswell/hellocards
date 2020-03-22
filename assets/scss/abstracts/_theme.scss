@@ -1,6 +1,11 @@
 :root {
-  --color-brand: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, 1));
-  --color-brand-opacity: hsla(var(--h, 3.2), var(--s, 85.5%), var(--l, 56.9%), var(--a, 0.3));
+  --hue: 3.2;
+  --saturation: 85.5%;
+  --lumnosity: 56.9%;
+  --alpha: 1;
+  --alpha-opacity: 0.3;
+  --color-brand: hsla(var(--hue), var(--saturation), var(--lumnosity), var(--alpha));
+  --color-brand-opacity: hsla(var(--hue), var(--saturation), var(--lumnosity), var(--alpha-opacity));
   --color-brand-rev: #fff;
   --color-dark: #222;
   --color-body: #444;
