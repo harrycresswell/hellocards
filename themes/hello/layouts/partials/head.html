@@ -50,6 +50,7 @@
   {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
-  <!-- Import Spectral from Google fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap" rel="stylesheet">
+  <!-- Import Fira Code and Permanent Marker from Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Permanent+Marker&display=swap" rel="stylesheet" crossorigin="anonymous">
 </head>
+
