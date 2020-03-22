@@ -56,13 +56,14 @@
   }
 
   h1 {
-    font-size: var(--font-size-l);
     text-transform: uppercase;
     letter-spacing: var(--space);
     line-height: var(--line-height-tight);
+    margin: 0;
   }
 
   h2 {
+    font-size: var(--font-size-m);
     font-weight: var(--font-regular);
   }
 }
@@ -75,9 +76,10 @@
 
   .your-name {
     border: 0;
+    color: var(--color-dark);
     font-family: var(--font-hand);
     font-size: var(--font-size-l);
-    height: 60px;
+    height: 56px;
     line-height: var(--line-height-tight);
     max-width: 100%;
     margin: 0;
@@ -88,8 +90,9 @@
 
 }
 
-.Sticky-bodyDetails {
+p.Sticky-bodyDetails {
   font-size: var(--font-size-s);
+  margin-top: unset;
 }
 
 .Sticker-footer {

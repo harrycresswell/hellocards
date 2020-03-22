@@ -9,26 +9,26 @@ a[class] {
 
   &:active,
   &:focus {
-    outline: dotted 1px var(--color-dark);
+    outline: dotted 1px var(--color-brand);
     outline-offset: 2px;
   }
 
 }
 
 a:not([class]) {
-  color: var(--color-link);
+  color: var(--color-brand);
   cursor: pointer;
   text-decoration: underline;
   text-decoration-skip-ink: auto;
 
   &:hover {
-    background: var(--color-link);
+    background: var(--color-brand);
     color: var(--color-white);
     text-decoration: none;
   }
 
   &:active,
   &:focus {
-    outline: dotted 1px var(--color-link);
+    outline: dotted 1px var(--color-brand);
   }
 }

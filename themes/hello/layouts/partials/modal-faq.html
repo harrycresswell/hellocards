@@ -5,7 +5,9 @@
       {{ with .Site.GetPage "/page/faq.md" }}
         <h4>{{ .Title }}</h4>
         <div class="Modal-content">
+        <ul class="Accordion">
           {{ .Content }}
+        </ul>
         </div>
       {{ end }}
     </aside>
