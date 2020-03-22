@@ -13,14 +13,14 @@ colorInput.addEventListener("change", function() {
 });
 
 const yourNameOutputTag = document.querySelector("textarea.your-name")
-const locationTag = document.querySelector("textarea.location")
+
 const originalText = yourNameOutputTag.value
 
 //contact
 const contactTag = document.querySelector("textarea.contact")
 
 // changing the name
-document.querySelector("[name=your-name]").addEventListener("keyup", function (event) {
+document.querySelector("[name=name]").addEventListener("keyup", function (event) {
   if (this.value) {
     yourNameOutputTag.value = this.value
   } else {
@@ -29,21 +29,21 @@ document.querySelector("[name=your-name]").addEventListener("keyup", function (e
 })
 
 yourNameOutputTag.addEventListener("keyup", function () {
-  document.querySelector("[name=your-name]").value = this.value
+  document.querySelector("[name=name]").value = this.value
 })
 
 // changing the location
-document.querySelector("[name=name]").addEventListener("keyup", function (event) {
-  if (this.value) {
-    locationTag.value = this.value
-  } else {
-    locationTag.value = originalText
-  }
-})
-
-locationTag.addEventListener("keyup", function () {
-  document.querySelector("[name=name]").value = this.value
-})
+// document.querySelector("[name=name]").addEventListener("keyup", function (event) {
+//   if (this.value) {
+//     locationTag.value = this.value
+//   } else {
+//     locationTag.value = originalText
+//   }
+// })
+//
+// locationTag.addEventListener("keyup", function () {
+//   document.querySelector("[name=name]").value = this.value
+// })
 
 // changing the contact address
 document.querySelector("[name=contact]").addEventListener("keyup", function (event) {
@@ -59,22 +59,45 @@ contactTag.addEventListener("keyup", function () {
 })
 
 // Grab selects
-const helpTypeTag = document.querySelector(`select[name="help-type"]`);
+const activityTag = document.querySelector(`select[name="activity"]`);
 
-const serviceTag = document.querySelector(`select[name="service"]`);
-const timeTag = document.querySelector(`select[name="time"]`);
+const thingTag = document.querySelector(`select[name="thing"]`);
+const socialChannelTag = document.querySelector(`select[name="social-channel"]`);
+const locationTag = document.querySelector(`select[name="location"]`)
+const dayTag = document.querySelector(`select[name="day"]`)
+const timeTag = document.querySelector(`select[name="time"]`)
+const timeZoneTag = document.querySelector(`select[name="timezone"]`)
+
 const contactMethodTag = document.querySelector(`select[name="contact-method"]`);
 
 // listen for changes
-helpTypeTag.addEventListener("change", function() {
+activityTag.addEventListener("change", function() {
   // update the dang HTML
-   document.getElementById("offer").innerHTML = this.value;
+   document.getElementById("activity").innerHTML = this.value;
 });
 
 // listen for changes
-serviceTag.addEventListener("change", function() {
+thingTag.addEventListener("change", function() {
   // update the dang HTML
-   document.getElementById("service").innerHTML = this.value;
+   document.getElementById("thing").innerHTML = this.value;
+});
+
+// listen for changes
+socialChannelTag.addEventListener("change", function() {
+  // update the dang HTML
+   document.getElementById("social-channel").innerHTML = this.value;
+});
+
+// listen for changes
+locationTag.addEventListener("change", function() {
+  // update the dang HTML
+   document.getElementById("location").innerHTML = this.value;
+});
+
+// listen for changes
+dayTag.addEventListener("change", function() {
+  // update the dang HTML
+   document.getElementById("day").innerHTML = this.value;
 });
 
 // listen for changes
@@ -82,6 +105,13 @@ timeTag.addEventListener("change", function() {
   // update the dang HTML
    document.getElementById("time").innerHTML = this.value;
 });
+
+// listen for changes
+timeZoneTag.addEventListener("change", function() {
+  // update the dang HTML
+   document.getElementById("timezone").innerHTML = this.value;
+});
+
 
 // listen for changes
 contactMethodTag.addEventListener("change", function() {
@@ -116,11 +146,30 @@ document.addEventListener('input', function (event) {
 }, false);
 
 // grab generate button and add click event
+
+function getCssRules(styleSheets) {
+              var cssRules = [];
+              var anchor = document.createElement('a');
+              styleSheets.forEach(function (sheet) {
+                  anchor.href = sheet.href;
+                  if (anchor.hostname === window.location.hostname) {
+                      util.asArray(sheet.cssRules || []).forEach(cssRules.push.bind(cssRules));
+                  }
+              });
+              return cssRules;
+          }
+
+
+
+
+
+
+
 document.getElementById('generate-sticker').addEventListener('click', function() {
 
   var node = document.getElementById('sticker-node');
 
-  var scale = 3; 
+  var scale = 3;
   domtoimage.toPng((node), { bgcolor: '#f7f7f7', quality: 1, width: node.clientWidth * scale,  height: node.clientHeight * scale,  style: {   transform: 'scale('+scale+')',   transformOrigin: 'top left' } })
     .then(function (dataUrl) {
         var link = document.createElement('a');
