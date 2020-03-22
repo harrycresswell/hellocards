@@ -274,8 +274,9 @@ form {
     .live-view {
       min-height: 100vh; } }
 
-.StickerBg {
-  padding: calc(var(--space) * 8); }
+@media (min-width: 48em) {
+  .StickerBg {
+    padding: calc(var(--space) * 8); } }
 
 .Sticker {
   background: var(--color-brand);
@@ -287,8 +288,11 @@ form {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin: calc(var(--space) * 8);
-  max-width: 75vw; }
+  margin: calc(var(--space) * 6) 0;
+  max-width: calc(var(--space) * 84); }
+  @media (min-width: 37.5em) {
+    .Sticker {
+      margin: calc(var(--space) * 8); } }
   @media (min-width: 48em) {
     .Sticker {
       max-width: calc(var(--space) * 64); } }

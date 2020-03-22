@@ -1,5 +1,7 @@
-.StickerBg {
-  padding: calc(var(--space) * 8);
+@include breakpoint(md) {
+  .StickerBg {
+    padding: calc(var(--space) * 8);
+  }
 }
 
 .Sticker {
@@ -12,8 +14,12 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin: calc(var(--space) * 8);
-  max-width: 75vw;
+  margin: calc(var(--space) * 6) 0;
+  max-width: calc(var(--space) * 84);
+
+  @include breakpoint(sm) {
+    margin: calc(var(--space) * 8);
+  }
 
   @include breakpoint(md) {
     max-width: calc(var(--space) * 64);
