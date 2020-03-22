@@ -13,7 +13,6 @@ $base-font-size = 100%/16px
 *
 Example:
 */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Permanent+Marker&display=swap");
 aside.primary {
   /* Regular content */ }
   @media (min-width: 37.5em) {
