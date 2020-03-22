@@ -110,13 +110,6 @@ timeZoneTag.addEventListener("change", function() {
    document.getElementById("timezone").innerHTML = this.value;
 });
 
-
-// listen for changes
-contactMethodTag.addEventListener("change", function() {
-  // update the dang HTML
-   document.getElementById("contact-method").innerHTML = this.value;
-});
-
 // auto expand text areas as people type
 // ...thanks for the code Chris Ferdinandi! (https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/)
 var autoExpand = function (field) {
@@ -146,22 +139,16 @@ document.addEventListener('input', function (event) {
 // grab generate button and add click event
 
 function getCssRules(styleSheets) {
-              var cssRules = [];
-              var anchor = document.createElement('a');
-              styleSheets.forEach(function (sheet) {
-                  anchor.href = sheet.href;
-                  if (anchor.hostname === window.location.hostname) {
-                      util.asArray(sheet.cssRules || []).forEach(cssRules.push.bind(cssRules));
-                  }
-              });
-              return cssRules;
-          }
-
-
-
-
-
-
+    var cssRules = [];
+    var anchor = document.createElement('a');
+    styleSheets.forEach(function (sheet) {
+        anchor.href = sheet.href;
+        if (anchor.hostname === window.location.hostname) {
+            util.asArray(sheet.cssRules || []).forEach(cssRules.push.bind(cssRules));
+        }
+    });
+    return cssRules;
+}
 
 document.getElementById('generate-sticker').addEventListener('click', function() {
 
