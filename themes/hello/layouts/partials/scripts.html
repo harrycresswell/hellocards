@@ -6,5 +6,5 @@
 <!-- Assign scripts to global, minify and fingerprint -->
 {{ $globalJS := $scripts | resources.Minify | resources.Fingerprint }}
 <!-- Load app.js and authenticate of hashed file -->
-<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}" media="screen">
+<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}" media="screen" crossorigin="anonymous">
 </script>

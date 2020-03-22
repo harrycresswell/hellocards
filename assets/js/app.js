@@ -116,11 +116,30 @@ document.addEventListener('input', function (event) {
 }, false);
 
 // grab generate button and add click event
+
+function getCssRules(styleSheets) {
+              var cssRules = [];
+              var anchor = document.createElement('a');
+              styleSheets.forEach(function (sheet) {
+                  anchor.href = sheet.href;
+                  if (anchor.hostname === window.location.hostname) {
+                      util.asArray(sheet.cssRules || []).forEach(cssRules.push.bind(cssRules));
+                  }
+              });
+              return cssRules;
+          }
+
+
+
+
+
+
+
 document.getElementById('generate-sticker').addEventListener('click', function() {
 
   var node = document.getElementById('sticker-node');
 
-  var scale = 3; 
+  var scale = 3;
   domtoimage.toPng((node), { bgcolor: '#f7f7f7', quality: 1, width: node.clientWidth * scale,  height: node.clientHeight * scale,  style: {   transform: 'scale('+scale+')',   transformOrigin: 'top left' } })
     .then(function (dataUrl) {
         var link = document.createElement('a');
