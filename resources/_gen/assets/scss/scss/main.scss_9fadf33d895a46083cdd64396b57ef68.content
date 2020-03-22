@@ -37,7 +37,7 @@ aside.primary {
 :root {
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-hand: 'Permanent Marker', cursive;
-  --font--mono: 'Fira Code', monospace;
+  --font-mono: 'Fira Code', monospace;
   --font-size-xl: 60px;
   --font-size-l: 48px;
   --font-size-m: 32px;
@@ -203,7 +203,8 @@ form {
 .Header {
   display: flex;
   justify-content: space-between;
-  align-items: top; }
+  align-items: start;
+  font-family: var(--font-mono); }
   @media (min-width: 75em) {
     .Header {
       align-items: center; } }

@@ -1,7 +1,8 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: start;
+  font-family: var(--font-mono);
 
   @include breakpoint(lg) {
     align-items: center;
