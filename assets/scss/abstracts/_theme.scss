@@ -5,8 +5,9 @@
   --alpha: 1;
   --alpha-opacity: 0.3;
   --color-brand: hsla(var(--hue), var(--saturation), var(--lumnosity), var(--alpha));
-  --color-brand-opacity: hsla(var(--hue), var(--saturation), var(--lumnosity), var(--alpha-opacity));
+  --color-brand-opacity: var(--color-lighter);
   --color-brand-rev: #fff;
+  --color-white: #fff;
   --color-dark: #222;
   --color-body: #444;
   --color-lighter: rgb(229, 229, 229);

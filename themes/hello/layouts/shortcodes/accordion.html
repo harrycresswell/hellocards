@@ -1,0 +1,7 @@
+<li class="Accordion-item">
+  <input type="radio" name="ac" id="{{ .Get "id" }}" />
+  <label for="{{ .Get "id" }}">{{ .Get "summary" }}</label>
+  <div class="Accordion-content">
+      {{ .Inner | markdownify }}
+  </div>
+</li>
