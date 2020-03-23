@@ -30,19 +30,6 @@ yourNameOutputTag.addEventListener("keyup", function () {
   document.querySelector("[name=name]").value = this.value
 })
 
-// changing the location
-// document.querySelector("[name=name]").addEventListener("keyup", function (event) {
-//   if (this.value) {
-//     locationTag.value = this.value
-//   } else {
-//     locationTag.value = originalText
-//   }
-// })
-//
-// locationTag.addEventListener("keyup", function () {
-//   document.querySelector("[name=name]").value = this.value
-// })
-
 // changing the contact address
 document.querySelector("[name=contact]").addEventListener("keyup", function (event) {
   if (this.value) {

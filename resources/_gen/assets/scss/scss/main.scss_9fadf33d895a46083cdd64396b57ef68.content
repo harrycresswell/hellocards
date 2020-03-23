@@ -327,7 +327,7 @@ input[type=radio] {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin: calc(var(--space) * 6) 0;
+  margin: calc(var(--space) * 6) calc(var(--space) * 4);
   max-width: calc(var(--space) * 84); }
   @media (min-width: 37.5em) {
     .Sticker {
@@ -420,7 +420,11 @@ p.Sticky-bodyDetails {
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 200ms;
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  padding: 0 calc(var(--space) * 4); }
+  @media (min-width: 48em) {
+    .Modal-overlay {
+      padding: 0; } }
 
 .Modal-overlay:target {
   visibility: visible;
@@ -470,45 +474,6 @@ a.Modal-close:hover {
     display: flex;
     flex-direction: column; }
 
-.Button {
-  border-width: 0;
-  border-radius: 0;
-  box-sizing: border-box;
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  outline-style: none;
-  text-align: left;
-  text-decoration: none;
-  border-radius: calc(var(--space) * 4);
-  vertical-align: middle;
-  white-space: nowrap;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: none; }
-
-/**
- * Component Modifier
- */
-.Button--primary {
-  background: var(--color-brand);
-  border: solid 2px transparent;
-  color: var(--color-brand-rev);
-  height: 48px;
-  margin: 0 auto;
-  outline-offset: 0;
-  padding: 0 24px; }
-
-/**
- * Component Modifier State
- */
-.Button--primary:hover,
-.Button--primary:focus,
-.Button--primary:active,
-.Button--primary.is-pressed {
-  transform: translateY(-2px);
-  transition: 0.2s;
-  border-radius: calc(var(--space) * 4);
-  box-shadow: 0 0 0 4px var(--color-brand-opacity); }
-
 .Accordion {
   margin: 20px auto; }
 
@@ -546,6 +511,45 @@ a.Modal-close:hover {
 
 .Accordion input:checked ~ .Accordion-content {
   display: block; }
+
+.Button {
+  border-width: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  outline-style: none;
+  text-align: left;
+  text-decoration: none;
+  border-radius: calc(var(--space) * 8);
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none; }
+
+/**
+ * Component Modifier
+ */
+.Button--primary {
+  background: var(--color-brand);
+  border: solid 2px transparent;
+  color: var(--color-brand-rev);
+  height: 48px;
+  margin: 0 auto;
+  outline-offset: 0;
+  padding: 0 24px; }
+
+/**
+ * Component Modifier State
+ */
+.Button--primary:hover,
+.Button--primary:focus,
+.Button--primary:active,
+.Button--primary.is-pressed {
+  transform: translateY(-2px);
+  transition: 0.2s;
+  border-radius: calc(var(--space) * 4);
+  box-shadow: 0 0 0 4px var(--color-brand-opacity); }
 
 .flex {
   display: flex; }
