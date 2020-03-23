@@ -14,11 +14,11 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  margin: calc(var(--space) * 6) 0;
-  max-width: calc(var(--space) * 84);
+  margin: calc(var(--space) * 6) auto;
+  max-width: 85vw;
 
   @include breakpoint(sm) {
-    margin: calc(var(--space) * 8);
+    max-width: 65vw;
   }
 
   @include breakpoint(md) {
