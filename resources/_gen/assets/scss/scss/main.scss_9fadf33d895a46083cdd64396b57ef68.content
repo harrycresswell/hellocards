@@ -327,13 +327,8 @@ input[type=radio] {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-<<<<<<< HEAD
   margin: calc(var(--space) * 6) auto;
   max-width: 85vw; }
-=======
-  margin: calc(var(--space) * 6) calc(var(--space) * 4);
-  max-width: calc(var(--space) * 84); }
->>>>>>> b4153fc17ebbbf393fe09a844966038d1ff6b9ce
   @media (min-width: 37.5em) {
     .Sticker {
       max-width: 65vw; } }
@@ -453,9 +448,12 @@ p.Sticky-bodyDetails {
 
 .Modal-cancel {
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   cursor: default; }
+  @media (min-width: 48em) {
+    .Modal-cancel {
+      width: 100%; } }
 
 .Modal-close {
   position: absolute;
