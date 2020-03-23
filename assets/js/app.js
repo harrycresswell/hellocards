@@ -30,19 +30,6 @@ yourNameOutputTag.addEventListener("keyup", function () {
   document.querySelector("[name=name]").value = this.value
 })
 
-// changing the location
-// document.querySelector("[name=name]").addEventListener("keyup", function (event) {
-//   if (this.value) {
-//     locationTag.value = this.value
-//   } else {
-//     locationTag.value = originalText
-//   }
-// })
-//
-// locationTag.addEventListener("keyup", function () {
-//   document.querySelector("[name=name]").value = this.value
-// })
-
 // changing the contact address
 document.querySelector("[name=contact]").addEventListener("keyup", function (event) {
   if (this.value) {
@@ -105,10 +92,10 @@ timeTag.addEventListener("change", function() {
 });
 
 // listen for changes
-timeZoneTag.addEventListener("change", function() {
-  // update the dang HTML
-   document.getElementById("timezone").innerHTML = this.value;
-});
+// timeZoneTag.addEventListener("change", function() {
+//   // update the dang HTML
+//    document.getElementById("timezone").innerHTML = this.value;
+// });
 
 // auto expand text areas as people type
 // ...thanks for the code Chris Ferdinandi! (https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/)

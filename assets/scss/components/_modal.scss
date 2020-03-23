@@ -8,6 +8,12 @@
   transition: opacity 200ms;
   visibility: hidden;
   opacity: 0;
+  padding: 0 calc(var(--space) * 4);
+
+  @include breakpoint(md) {
+    padding: 0;
+  }
+
 }
 
 .Modal-overlay:target {
