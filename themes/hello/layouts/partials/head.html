@@ -21,12 +21,6 @@
   <meta property="twitter:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
   <meta property="twitter:description" content="{{ if eq $isHomePage false }} {{ .Description }}{{ end }} {{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <!-- Me -->    
-  {{ with .Site.Author.name }}<meta name="author" content="{{ . }}">{{ end }}
-  <link href="mailto:{{ .Site.Author.email }}" rel="me">
-  <link href="{{ .Site.Author.twitter }}" rel="me">
-  <link href="{{ .Site.Author.github }}" rel="me">
-  <link href="{{ .Site.Author.linkedin }}" rel="me">
   <!-- Styles -->
   {{ if .Site.IsServer }}
     <!-- Pipe Sass to CSS, include options, enable sourcemaps -->

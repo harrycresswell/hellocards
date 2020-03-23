@@ -1,8 +1,13 @@
 baseURL = "https://remotecards.netlify.com/"
 languageCode = "en-us"
 title = "remote.cards"
-description = "A simple hello card generator"
+description = "Generate a card to tell your audience what you’re up to."
 theme="hello"
+
+[params]
+  description = "Generate a card to tell your audience what you’re up to."
+  strapline = "Generate a card to tell your audience what you’re up to."
+  location = "London, UK"
 
 [permalinks]
   page = "/:title/"
