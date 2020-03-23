@@ -420,7 +420,8 @@ p.Sticky-bodyDetails {
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 200ms;
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  padding: calc(var(--space) * 4); }
 
 .Modal-overlay:target {
   visibility: visible;

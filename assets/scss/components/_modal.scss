@@ -8,6 +8,7 @@
   transition: opacity 200ms;
   visibility: hidden;
   opacity: 0;
+  padding: calc(var(--space) * 4);
 }
 
 .Modal-overlay:target {
