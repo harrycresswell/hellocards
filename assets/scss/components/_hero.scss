@@ -4,4 +4,10 @@
   h1 {
     margin-bottom: calc(var(--space) * 3);
   }
+
+}
+
+.Hero-title span {
+  background-color: var(--color-lightest);
+  color: var(--color-brand);
 }

@@ -131,8 +131,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-dark);
-  hyphens: auto; }
+  color: var(--color-dark); }
 
 h1:not(:first-of-type),
 h2:not(:first-of-type),
@@ -177,7 +176,7 @@ a[class] {
   a[class]:hover {
     text-decoration: underline; }
   a[class]:active, a[class]:focus {
-    outline: dotted 1px var(--color-brand);
+    outline: dotted 1px var(--color-dark);
     outline-offset: 2px; }
 
 a:not([class]) {
@@ -300,6 +299,10 @@ input[type=radio] {
   .Hero h1 {
     margin-bottom: calc(var(--space) * 3); }
 
+.Hero-title span {
+  background-color: var(--color-lightest);
+  color: var(--color-brand); }
+
 .live-view {
   background: var(--color-lightest);
   display: flex;
@@ -382,7 +385,7 @@ input[type=radio] {
 
 p.Sticky-bodyDetails {
   font-size: var(--font-size-s);
-  margin-top: unset; }
+  margin-top: calc(var(--space) / 2); }
 
 .Sticker-footer {
   display: flex;
@@ -568,6 +571,12 @@ a.Modal-close:hover {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important; }
+
+.mt-1 {
+  margin-top: var(--space); }
+
+.mt-2 {
+  margin-top: calc(var(--space)*2); }
 
 .mt-3 {
   margin-top: calc(var(--space)*3); }

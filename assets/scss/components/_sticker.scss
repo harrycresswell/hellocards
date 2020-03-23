@@ -92,7 +92,7 @@
 
 p.Sticky-bodyDetails {
   font-size: var(--font-size-s);
-  margin-top: unset;
+  margin-top: calc(var(--space) / 2);
 }
 
 .Sticker-footer {
