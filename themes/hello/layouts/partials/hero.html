@@ -1,5 +1,17 @@
 <section class="Hero">
+{{ if .IsHome}}
+  <h1 class="Hero-title">Promote <span>remote events</span></h1>
+  <h2 class="Hero-description font-weight-400">
+  Generate a card to tell your audience what you’re up to.
+  </h2>
+{{ else }}
   <h1 class="Hero-title">{{ .Title }}</h1>
-  <h2 class="Hero-description font-weight-400">{{ with .Params.description }}{{ . }}
-  {{ else }}{{ .Site.Params.Description }}{{ end }}</h2>
+  <h2 class="Hero-description font-weight-400">
+  {{ with .Params.description }}
+    {{ . }}
+  {{ else }}
+    {{ .Site.Params.Description }}
+  {{ end }}
+  </h2>
+{{ end }}
 </section>

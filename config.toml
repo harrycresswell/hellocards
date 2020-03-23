@@ -1,6 +1,6 @@
 baseURL = "https://remotecards.netlify.com/"
 languageCode = "en-us"
-title = "hello.cards"
+title = "remote.cards"
 description = "A simple hello card generator"
 theme="hello"
 
