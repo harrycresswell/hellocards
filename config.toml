@@ -1,4 +1,4 @@
-baseURL = "https://remotecards.netlify.com/"
+baseURL = "https://remote.cards/"
 languageCode = "en-us"
 title = "remote.cards"
 description = "Generate a card and tell your audience when you’re live. "
