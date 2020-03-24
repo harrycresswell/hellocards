@@ -2,9 +2,21 @@
   <p><strong>Step 1:</strong> Tell everyone about yourself, and what you’re up to.</p>
   <fieldset>
     <legend>Your details</legend>
-    <label for="name">What is your name?</label>
+
+    <select name="prefix" required>
+      {{ range .Site.Data.prefix }}
+      <option value="{{ .name }}" name="prefix">{{ .name }}</option>
+      {{ end }}
+    </select>
+
     <input name="name" type="text" placeholder="eg. Hugo" required>
-    <label for="job">I'm </label>
+
+    <select name="user" required>
+      {{ range .Site.Data.user}}
+      <option value="{{ .name }}" name="user">{{ .name }}</option>
+      {{ end }}
+    </select>
+
     <select name="activity" required>
       {{ range .Site.Data.action }}
       <option value="{{ .name }}" name="activity">{{ .name }}</option>
