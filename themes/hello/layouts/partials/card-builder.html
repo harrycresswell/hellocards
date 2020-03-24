@@ -1,13 +1,21 @@
 <form name="card-builder" class="CardBuilder" method="POST" action="/" netlify>
   <!-- <p><strong>Step 2:</strong> Customise your card to make it your own</p> -->
   <fieldset>
-    <legend>Customise</legend>
+    <legend>Step 1: Choose a colour</legend>
     <input type="color" name="color" value="#ef3d33" id="choose-theme-color">
   </fieldset>
-  <p><strong>Step 1:</strong> Tell everyone about yourself, and what you’re up to.</p>
   <fieldset>
+
+    <legend>Step 2: Add your details</legend>
+    <select name="prefix" required>
+      {{ range .Site.Data.prefix }}
+      <option value="{{ .name }}" name="prefix">{{ .name }}</option>
+      {{ end }}
+    </select>
+
     <legend>Your details</legend>
     <label for="name">What’s your name?</label>
+
     <input name="name" type="text" placeholder="eg. Hugo" required>
     <label for="activity" class="visually-hidden">user</label>
     <select name="user" required>
@@ -62,11 +70,22 @@
       <input name="contact" type="text" placeholder="eg. hello@remote.cards" required>
     </div>
   </fieldset>
+
+  <fieldset>
+    <legend>Step 3: Download your card and share it on social media</legend>
+    <input type="button" id="generate-sticker" value="Download card" class="mt-3 Button Button--primary" />
+  </fieldset>
+
   <p><strong>Step 3:</strong> Download your card and share it on social media.</p>
 <<<<<<< HEAD
   <input type="button" id="generate-sticker" value="Download card" class="Button Button--primary" />
 </form>
 =======
   <input type="button" id="generate-sticker" value="Download card" class="mt-3 Button Button--primary" />
+<<<<<<< HEAD
 </form>
 >>>>>>> 167c983bf14dc6ced319c4f27aea2b941ae52097
+=======
+
+</form>
+>>>>>>> b37901282bacd0ddab335cb0c847186994044fba
