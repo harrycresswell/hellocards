@@ -36,10 +36,16 @@
       <option value="{{ .name }}" name="day">{{ .name }}</option>
       {{ end }}
     </select>
-    <label for="time">at</label>
+    <label for="time">from</label>
     <select name="time" required>
       {{ range .Site.Data.time }}
       <option value="{{ .name }}" name="time">{{ .name }}</option>
+      {{ end }}
+    </select>
+    <label for="time-end">until</label>
+    <select name="time-end" required>
+      {{ range .Site.Data.time }}
+      <option value="{{ .name }}" name="time-end">{{ .name }}</option>
       {{ end }}
     </select>
     <div class="mt-1">

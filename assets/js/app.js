@@ -45,12 +45,12 @@ contactTag.addEventListener("keyup", function () {
 
 // Grab selects
 const activityTag = document.querySelector(`select[name="activity"]`);
-
 const thingTag = document.querySelector(`select[name="thing"]`);
 const socialChannelTag = document.querySelector(`select[name="social-channel"]`);
 const locationTag = document.querySelector(`select[name="location"]`)
 const dayTag = document.querySelector(`select[name="day"]`)
 const timeTag = document.querySelector(`select[name="time"]`)
+const timeEndTag = document.querySelector(`select[name="time-end"]`)
 const timeZoneTag = document.querySelector(`select[name="timezone"]`)
 
 const contactMethodTag = document.querySelector(`select[name="contact-method"]`);
@@ -89,6 +89,12 @@ dayTag.addEventListener("change", function() {
 timeTag.addEventListener("change", function() {
   // update the dang HTML
    document.getElementById("time").innerHTML = this.value;
+});
+
+// listen for changes
+timeEndTag.addEventListener("change", function() {
+  // update the dang HTML
+   document.getElementById("time-end").innerHTML = this.value;
 });
 
 // listen for changes
