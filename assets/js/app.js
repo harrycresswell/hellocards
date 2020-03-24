@@ -44,6 +44,7 @@ contactTag.addEventListener("keyup", function () {
 });
 
 // Grab selects
+
 const prefixTag = document.getElementById("prefix");
 const userTag = document.querySelector(`select[name="user"]`);
 const activityTag = document.querySelector(`select[name="activity"]`);
@@ -59,14 +60,12 @@ const contactMethodTag = document.querySelector(`select[name="contact-method"]`)
 
 userTag.addEventListener("change", function() {
   document.getElementById("user").innerHTML = this.value;
-  if (prefixTag.innerHTML =="My name is") {
-    prefixTag.innerHTML ="Our name is";
-    console.log(prefixTag);
-  } else if (prefixTag.innerHTML =="Our name is") {
+  if (prefixTag.innerHTML == "My name is") {
+    prefixTag.innerHTML = "Our name is";
+  } else if (prefixTag.innerHTML == "Our name is") {
     prefixTag.innerHTML = "My name is";
-    }
+  };
 });
-
 
 // listen for changes
 activityTag.addEventListener("change", function() {
