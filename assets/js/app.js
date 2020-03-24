@@ -10,61 +10,61 @@ colorInput.addEventListener("change", function() {
   localStorage.setItem("userThemeColor", this.value);
 });
 
-const yourNameOutputTag = document.querySelector("textarea.your-name")
+const yourNameOutputTag = document.querySelector("textarea.your-name");
 
-const originalText = yourNameOutputTag.value
+const originalText = yourNameOutputTag.value;
 
 //contact
-const contactTag = document.querySelector("textarea.contact")
+const contactTag = document.querySelector("textarea.contact");
 
 // changing the name
 document.querySelector("[name=name]").addEventListener("keyup", function (event) {
   if (this.value) {
-    yourNameOutputTag.value = this.value
+    yourNameOutputTag.value = this.value;
   } else {
-    yourNameOutputTag.value = originalText
-  }
-})
+    yourNameOutputTag.value = originalText;
+  };
+});
 
 yourNameOutputTag.addEventListener("keyup", function () {
-  document.querySelector("[name=name]").value = this.value
-})
+  document.querySelector("[name=name]").value = this.value;
+});
 
 // changing the contact address
 document.querySelector("[name=contact]").addEventListener("keyup", function (event) {
   if (this.value) {
-    contactTag.value = this.value
+    contactTag.value = this.value;
   } else {
-    contactTag.value = originalText
-  }
-})
+    contactTag.value = originalText;
+  };
+});
 
 contactTag.addEventListener("keyup", function () {
-  document.querySelector("[name=contact]").value = this.value
-})
+  document.querySelector("[name=contact]").value = this.value;
+});
 
 // Grab selects
-const prefixTag = document.getElementById(`prefix`);
+
+const prefixTag = document.getElementById("prefix");
 const userTag = document.querySelector(`select[name="user"]`);
 const activityTag = document.querySelector(`select[name="activity"]`);
 const thingTag = document.querySelector(`select[name="thing"]`);
 const socialChannelTag = document.querySelector(`select[name="social-channel"]`);
-const locationTag = document.querySelector(`select[name="location"]`)
-const dayTag = document.querySelector(`select[name="day"]`)
-const timeTag = document.querySelector(`select[name="time"]`)
-const timeEndTag = document.querySelector(`select[name="time-end"]`)
-const timeZoneTag = document.querySelector(`select[name="timezone"]`)
+const locationTag = document.querySelector(`select[name="location"]`);
+const dayTag = document.querySelector(`select[name="day"]`);
+const timeTag = document.querySelector(`select[name="time"]`);
+const timeEndTag = document.querySelector(`select[name="time-end"]`);
+const timeZoneTag = document.querySelector(`select[name="timezone"]`);
 
 const contactMethodTag = document.querySelector(`select[name="contact-method"]`);
 
 userTag.addEventListener("change", function() {
-  // update the dang HTML
-   document.getElementById("user").innerHTML = this.value;
-   if (prefixTag.innerHTML == "My name is") {
-     prefixTag.innerHTML = "Our name is";
-   } else if (prefixTag.innerHTML == "Our name is") {
-     prefixTag.innerHTML = "My name is"
-   };
+  document.getElementById("user").innerHTML = this.value;
+  if (prefixTag.innerHTML == "My name is") {
+    prefixTag.innerHTML = "Our name is";
+  } else if (prefixTag.innerHTML == "Our name is") {
+    prefixTag.innerHTML = "My name is";
+  };
 });
 
 // listen for changes
