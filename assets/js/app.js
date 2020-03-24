@@ -57,11 +57,6 @@ const timeZoneTag = document.querySelector(`select[name="timezone"]`);
 
 const contactMethodTag = document.querySelector(`select[name="contact-method"]`);
 
-
-
-
-
-
 userTag.addEventListener("change", function() {
   document.getElementById("user").innerHTML = this.value;
   if (prefixTag.innerHTML =="My name is") {
@@ -71,28 +66,6 @@ userTag.addEventListener("change", function() {
     prefixTag.innerHTML = "My name is";
     }
 });
-
-//
-// userTag.addEventListener("change", function() {
-//   if (prefixTag.innerHTML == "My name is") {
-//     prefixTag.innerHTML = "Our name is";
-//   }
-//   if (prefixTag.innerHTML == "Our name is") {
-//     prefixTag.innerHTML = "My name is";
-//   }
-//   console.log(prefixTag);
-// });
-
-
-// userTag.addEventListener("change", function() {
-//   // const prefixTag = document.querySelector(`h2[id="prefix"]`);
-//   // update the dang HTML
-//   if document.querySelector(`h2[id="prefix"]`).innerHTML == "My name is") {
-//     document.getElementById("preifx").innerHTML = "My name is";
-//   } else if document.querySelector(`h2[id="prefix"]`).innerHTML == "Our name is" {
-//     document.getElementById("prefix").innerHTML = "My name is";
-//   }
-// });
 
 
 // listen for changes
