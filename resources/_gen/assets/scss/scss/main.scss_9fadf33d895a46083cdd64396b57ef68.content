@@ -585,7 +585,4 @@ a.Modal-close:hover {
 .mt-2 {
   margin-top: calc(var(--space)*2); }
 
-.mt-3 {
-  margin-top: calc(var(--space)*3); }
-
 /*# sourceMappingURL=main.css.map */

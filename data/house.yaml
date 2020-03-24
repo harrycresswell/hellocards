@@ -1,17 +1,17 @@
-- name: my home office
-- name: my living room
-- name: my garden
-- name: my kitchen
-- name: my bedroom
-- name: my bed
-- name: my patio
-- name: under my bed
-- name: my sofa
-- name: my home gym
-- name: behind my sofa
-- name: my basement
-- name: my bathroom
-- name: my pool house
-- name: my swimming pool
-- name: my hot tub
-- name: my spaceship
+- name: the home office
+- name: the living room
+- name: the garden
+- name: the kitchen
+- name: the bedroom
+- name: the bed
+- name: the patio
+- name: under the bed
+- name: the sofa
+- name: the home gym
+- name: behind the sofa
+- name: the basement
+- name: the bathroom
+- name: the pool house
+- name: the swimming pool
+- name: the hot tub
+- name: the spaceship
