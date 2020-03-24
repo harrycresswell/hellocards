@@ -5,6 +5,7 @@
     <input type="color" name="color" value="#ef3d33" id="choose-theme-color">
   </fieldset>
   <fieldset>
+
     <legend>Step 2: Add your details</legend>
     <select name="prefix" required>
       {{ range .Site.Data.prefix }}
@@ -12,19 +13,23 @@
       {{ end }}
     </select>
 
-    <input name="name" type="text" placeholder="eg. Hugo" required>
+    <legend>Your details</legend>
+    <label for="name">What’s your name?</label>
 
+    <input name="name" type="text" placeholder="eg. Hugo" required>
+    <label for="activity" class="visually-hidden">user</label>
     <select name="user" required>
       {{ range .Site.Data.user}}
       <option value="{{ .name }}" name="user">{{ .name }}</option>
       {{ end }}
     </select>
-
+    <label for="activity" class="visually-hidden">action</label>
     <select name="activity" required>
       {{ range .Site.Data.action }}
       <option value="{{ .name }}" name="activity">{{ .name }}</option>
       {{ end }}
     </select>
+    <label for="thing" class="visually-hidden">thing</label>
     <select name="thing" required>
       {{ range .Site.Data.thing }}
       <option value="{{ .name }}" name="thing">{{ .name }}</option>
@@ -65,8 +70,13 @@
       <input name="contact" type="text" placeholder="eg. hello@remote.cards" required>
     </div>
   </fieldset>
+
   <fieldset>
     <legend>Step 3: Download your card and share it on social media</legend>
     <input type="button" id="generate-sticker" value="Download card" class="mt-3 Button Button--primary" />
   </fieldset>
+
+  <p><strong>Step 3:</strong> Download your card and share it on social media.</p>
+  <input type="button" id="generate-sticker" value="Download card" class="mt-3 Button Button--primary" />
+
 </form>
