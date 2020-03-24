@@ -23,12 +23,9 @@
     </select>
     <label for="location">from</label>
     <select name="location" required>
-      <option value="my home office" name="location">my home office</option>
-      <option value="my living room" name="location">my living room</option>
-      <option value="my home gym" name="location">my home gym</option>
-      <option value="my kitchen" name="location">my kitchen</option>
-      <option value="my garden" name="location">my garden</option>
-      <option value="my bedroom" name="location">my bedroom</option>
+      {{ range .Site.Data.house }}
+      <option value="{{ .name }}" name="location">{{ .name }}</option>
+      {{ end }}
     </select>
     <label for="day">on</label>
     <select name="day" required>

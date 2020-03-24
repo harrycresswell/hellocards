@@ -97,12 +97,6 @@ timeEndTag.addEventListener("change", function() {
    document.getElementById("time-end").innerHTML = this.value;
 });
 
-// listen for changes
-// timeZoneTag.addEventListener("change", function() {
-//   // update the dang HTML
-//    document.getElementById("timezone").innerHTML = this.value;
-// });
-
 // auto expand text areas as people type
 // ...thanks for the code Chris Ferdinandi! (https://gomakethings.com/automatically-expand-a-textarea-as-the-user-types-using-vanilla-javascript/)
 var autoExpand = function (field) {
