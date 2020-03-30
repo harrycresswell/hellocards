@@ -50,7 +50,6 @@ const userTag = document.querySelector(`select[name="user"]`);
 const activityTag = document.querySelector(`select[name="activity"]`);
 const thingTag = document.querySelector(`select[name="thing"]`);
 const socialChannelTag = document.querySelector(`select[name="social-channel"]`);
-const locationTag = document.querySelector(`select[name="location"]`);
 const dayTag = document.querySelector(`select[name="day"]`);
 const timeTag = document.querySelector(`select[name="time"]`);
 const timeEndTag = document.querySelector(`select[name="time-end"]`);
@@ -83,12 +82,6 @@ thingTag.addEventListener("change", function() {
 socialChannelTag.addEventListener("change", function() {
   // update the dang HTML
    document.getElementById("social-channel").innerHTML = this.value;
-});
-
-// listen for changes
-locationTag.addEventListener("change", function() {
-  // update the dang HTML
-   document.getElementById("location").innerHTML = this.value;
 });
 
 // listen for changes
