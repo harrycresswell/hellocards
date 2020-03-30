@@ -96,7 +96,14 @@
 
 p.Sticky-bodyDetails {
   font-size: var(--font-size-s);
-  margin-top: calc(var(--space) / 2);
+  margin-top: 0;
+
+  @media (min-width: 490px) {
+    .break {
+      display: block;
+    }
+  }
+
 }
 
 .Sticker-footer {

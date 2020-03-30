@@ -389,7 +389,10 @@ input[type=radio] {
 
 p.Sticky-bodyDetails {
   font-size: var(--font-size-s);
-  margin-top: calc(var(--space) / 2); }
+  margin-top: 0; }
+  @media (min-width: 490px) {
+    p.Sticky-bodyDetails .break {
+      display: block; } }
 
 .Sticker-footer {
   display: flex;
