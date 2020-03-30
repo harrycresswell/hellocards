@@ -1,8 +1,7 @@
-<form name="card-builder" class="CardBuilder" method="POST" action="/" netlify>
-  <!-- <p><strong>Step 2:</strong> Customise your card to make it your own</p> -->
+<form name="card-builder" class="CardBuilder">
   <fieldset>
     <legend>Step 1: Choose a colour</legend>
-    <input type="color" name="color" id="choose-theme-color">
+    <input type="color" value="" name="color" id="choose-theme-color">
   </fieldset>
   <fieldset>
     <legend>Step 2: Add your details</legend>
@@ -32,12 +31,6 @@
       <option value="{{ .name }}" name="social-channel">{{ .name }}</option>
       {{ end }}
     </select>
-    <label for="location">from</label>
-    <select name="location" required>
-      {{ range .Site.Data.house }}
-      <option value="{{ .name }}" name="location">{{ .name }}</option>
-      {{ end }}
-    </select>
     <label for="day" class="visually-hidden">on</label>
     <select name="day" required>
       {{ range .Site.Data.when }}
@@ -64,7 +57,6 @@
 
   <fieldset>
     <legend>Step 3: Download your card and share it on social media</legend>
-    <input type="submit" value="List my card" class="Button Button--primary" />
     <input type="button" id="generate-sticker" value="Download card" class="Button Button--primary" />
   </fieldset>
 </form>

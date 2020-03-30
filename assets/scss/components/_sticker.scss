@@ -1,3 +1,7 @@
+.StickerBg {
+  padding: calc(var(--space) * 6);
+}
+
 @include breakpoint(md) {
   .StickerBg {
     padding: calc(var(--space) * 8);

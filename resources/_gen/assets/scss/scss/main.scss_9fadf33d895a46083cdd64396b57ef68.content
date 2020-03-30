@@ -297,7 +297,8 @@ input[type=radio] {
 .Hero {
   margin: calc(var(--space)*14) 0; }
   .Hero h1 {
-    margin-bottom: calc(var(--space) * 3); }
+    margin-bottom: calc(var(--space) * 3);
+    max-width: 19ch; }
 
 .Hero-title span {
   background-color: var(--color-lightest);
@@ -312,6 +313,9 @@ input[type=radio] {
   @media (min-width: 48em) {
     .live-view {
       min-height: 100vh; } }
+
+.StickerBg {
+  padding: calc(var(--space) * 6); }
 
 @media (min-width: 48em) {
   .StickerBg {
