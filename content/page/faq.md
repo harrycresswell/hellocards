@@ -34,14 +34,14 @@ If you’re having trouble downloading your card on an IOS device, make sure you
 
 If you’re on Android, we’re sorry we haven’t done any testing yet 🙈. But we’re working on it.
 
-If you’re on a computer and you’re still having issues, please contact <a href="mailto:studio@harrycresswell.com" target="_blank">studio@harrycresswell.com</a> and I’ll do my best to assist you.
+If you’re on a computer and you’re still having issues, please contact <a href="mailto:harry@remote.cards" target="_blank">harry@remote.cards</a> or <a href="mailto:ben@remote.cards" target="_blank">ben@remote.cards</a> and we’ll do our best to assist you.
 
 {{< /accordion >}}
 
 {{< accordion summary="Who made this thing?" id="5" >}}
 
-We’re <a href="https://harrycresswell.com/" target="_blank">Harry</a> and <a href="http://benmclaren.xyz/" target="_blank">Ben</a>.
+We’re <a href="https://harrycresswell.com/" target="_blank">Harry</a> and <a href="http://benmclaren.xyz/" target="_blank">Ben</a>, brothers from London, who build things for the web.
 
-Two brothers from London, UK who build things for the web.
+Thanks for checking out the project!
 
 {{< /accordion >}}
