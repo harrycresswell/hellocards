@@ -1,5 +1,5 @@
 // Yank theme color from localStorage and use it.
-document.documentElement.style.setProperty("--color-brand", localStorage.getItem("userThemeColor"));
+// document.documentElement.style.setProperty("--color-brand", localStorage.getItem("userThemeColor"));
 
 const colorInput = document.querySelector("#choose-theme-color");
 
@@ -7,7 +7,7 @@ colorInput.addEventListener("change", function() {
   // Theme the site!
   document.documentElement.style.setProperty("--color-brand", this.value);
   // Save the value for next time page is visited.
-  localStorage.setItem("userThemeColor", this.value);
+  // localStorage.setItem("userThemeColor", this.value);
 });
 
 const yourNameOutputTag = document.querySelector("textarea.your-name");
