@@ -18,7 +18,6 @@ aside.primary {
   @media (min-width: 37.5em) {
     aside.primary {
       /* responsive content */ } }
-
 :root {
   --hue: 3.2;
   --saturation: 85.5%;
@@ -236,7 +235,6 @@ input[type=radio] {
   @media (min-width: 75em) {
     .Wrapper {
       grid-template-columns: 1fr 1fr; } }
-
 .Header {
   display: flex;
   justify-content: space-between;
@@ -259,14 +257,12 @@ input[type=radio] {
       bottom: calc(var(--space) * 2);
       right: calc(var(--space) * 2);
       text-align: right; } }
-
 .Nav-list {
   text-align: right; }
   @media (min-width: 75em) {
     .Nav-list {
       display: flex;
       text-align: left; } }
-
 .Nav-list > * + * {
   margin: 0 0 0 calc(var(--space) * 2); }
 
@@ -279,7 +275,6 @@ input[type=radio] {
   @media (min-width: 37.5em) {
     .Nav-listItemLink {
       padding: calc(var(--space) / 2) var(--space); } }
-
 .Nav-listItemLink:hover,
 .Nav-listItemLink:focus {
   background-color: var(--color-lightest); }
@@ -313,7 +308,6 @@ input[type=radio] {
   @media (min-width: 48em) {
     .live-view {
       min-height: 100vh; } }
-
 .StickerBg {
   padding: calc(var(--space) * 6); }
 
@@ -393,7 +387,6 @@ p.Sticky-bodyDetails {
   @media (min-width: 490px) {
     p.Sticky-bodyDetails .break {
       display: block; } }
-
 .Sticker-footer {
   display: flex;
   align-items: center;
@@ -432,7 +425,6 @@ p.Sticky-bodyDetails {
   @media (min-width: 48em) {
     .Modal-overlay {
       padding: 0; } }
-
 .Modal-overlay:target {
   visibility: visible;
   opacity: 1; }
@@ -461,7 +453,6 @@ p.Sticky-bodyDetails {
   @media (min-width: 48em) {
     .Modal-cancel {
       width: 100%; } }
-
 .Modal-close {
   position: absolute;
   width: calc(var(--space) * 4);

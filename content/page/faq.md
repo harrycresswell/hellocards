@@ -16,7 +16,7 @@ The idea is that you create a custom card, then share it with your friends on so
 
 Sure thing.
 
-If you want to help us build this project then head to <a href="https://github.com/harrycresswell/hellocards" target="_blank">the repository on Github</a>, fork the project and submit a pull request.
+If you want to help us build this project then head to [the repository on Github](https://github.com/harrycresswell/hellocards), fork the project and submit a pull request.
 
 {{< /accordion >}}
 
@@ -24,23 +24,23 @@ If you want to help us build this project then head to <a href="https://github.c
 
 Good question. That depends on whether you like it!
 
-We have <a href="https://trello.com/b/DHO7G35Y/remotecards" target="_blank">a public roadmap</a> for what we have planned, including some of the features we’d like to add. If you have any [suggestions](/#modal-suggestions), we’d love to hear from you.
+We have [a public roadmap](https://trello.com/b/DHO7G35Y/remotecards) for what we have planned, including some of the features we’d like to add. If you have any [suggestions](/#modal-suggestions), we’d love to hear from you.
 
 {{< /accordion >}}
 
 {{< accordion summary="Why can’t I download my card?" id="4" >}}
 
-If you’re having trouble downloading your card on an IOS device, make sure you have Apple’s <a href="https://apps.apple.com/us/app/files/id1232058109" target="_blank">Files</a> app installed before you download your card.
+If you’re having trouble downloading your card on an IOS device, make sure you have Apple’s [Files](https://apps.apple.com/us/app/files/id1232058109) app installed before you download your card.
 
 If you’re on Android, we’re sorry we haven’t done any testing yet 🙈. But we’re working on it.
 
-If you’re on a computer and you’re still having issues, please contact <a href="mailto:harry@remote.cards" target="_blank">harry@remote.cards</a> or <a href="mailto:ben@remote.cards" target="_blank">ben@remote.cards</a> and we’ll do our best to assist you.
+If you’re on a computer and you’re still having issues, please contact [Harry](mailto:studio@harrycresswell.com) or [Ben](mailto:bmclaren01@gmail.com) and we’ll do our best to assist you.
 
 {{< /accordion >}}
 
 {{< accordion summary="Who made this thing?" id="5" >}}
 
-We’re <a href="https://harrycresswell.com/" target="_blank">Harry</a> and <a href="http://benmclaren.xyz/" target="_blank">Ben</a>, brothers from London, who build things for the web.
+We’re [Harry](https://harrycresswell.com/) and [Ben](http://benmclaren.xyz/), brothers from London, who build things for the web.
 
 Thanks for checking out the project!
 
